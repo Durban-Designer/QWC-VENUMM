@@ -149,7 +149,9 @@
     position: absolute;
     top: -2000px;
     width: 100%;
-    z-index: 3;
+    height: 100%;
+    margin-top: 100px;
+    z-index: 1;
   }
 
   .navtile {
@@ -157,7 +159,7 @@
     height: 40px;
     line-height: 40px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     padding: 4px;
     background: #0c2069;
     text-align: center;
