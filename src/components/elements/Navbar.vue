@@ -1,6 +1,6 @@
 <template>
   <div id="Navbar" class="nav">
-    <router-link to="/"><div class="logo"></div></router-link>
+    <router-link to="../assets/qwc-venumm.png"><div class="logo"></div></router-link>
     <div v-on:click="navToggle" class="navButton">
       <center><div v-bind:class="navbutton" class="navButtonIcon"></div></center>
     </div>
@@ -97,8 +97,8 @@
   @secondaryColor: #1a222e;
   @paymentColor: #519d10;
   @medicalColor: #ee1f34;
-  @darkTR: #1a222e;
-  @lightTR: #3f62ad;
+  @darkTR: #515B54;
+  @lightTR: #515B54;
   @textColor: #9fb0d6;
   @baseFontSize: 1em;
   @boldText: "Candara";
@@ -123,13 +123,13 @@
     background-repeat: no-repeat;
     margin-top: 4px;
     margin-left: 10px;
-    grid-column: 2;
+    grid-column: 5;
     height: 70px;
     width: 240px;
   }
 
   .navButton {
-    grid-column: 4;
+    grid-column: 2;
     margin-left: 40px;
     width: 100px;
     height: 100px;
