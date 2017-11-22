@@ -5,16 +5,17 @@
     </div>
     <div v-bind:class="navpane" class="navpane">
       <center>
-        <router-link to="/about"><div v-on:click="aboutNav" v-bind:class="about">About</div></router-link>
-        <router-link to="/firstarticle"><div v-on:click="firstArticleNav" v-bind:class="about">First Article</div></router-link>
+        <router-link to="/about"><div v-on:click="navigate" v-bind:class="about">About</div></router-link>
+        <router-link to="/firstarticle"><div v-on:click="navigate" v-bind:class="about">First Article</div></router-link>
       </center>
     </div>
-    <div class="logo" v-on:click="homeNav"></div>
+    <div class="logo"><router-link to="/"></router-link></div>
+    <div class="sexy_line"></div>
   </div>
 </template>
 
 <script>
-  var x = false
+  var x = 0
   export default {
     name: 'Navbar',
     data: function () {
@@ -63,34 +64,24 @@
     },
     methods: {
       navToggle: function () {
-        if (x === false) {
-          x = true
+        // Nav button functionality
+        if (x === 0) {
+          x++
           this.isToggled = true
           this.first = false
-        } else if (x === true) {
-          x = false
+        } else if (x === 1) {
+          x--
           this.isToggled = false
         }
       },
-      homeNav: function () {
-        this.$router.push('/')
-        this.navigate()
-      },
-      aboutNav: function () {
-        this.$router.push('/about')
-        this.navigate()
-      },
-      firstArticleNav: function () {
-        this.$router.push('/firstarticle')
-        this.navigate()
-      },
       navigate: function () {
         this.isToggled = false
-        x = false
+        x--
       },
       logOut: function () {
+        this.isToggled = false
+        x--
         this.$emit('logOut')
-        this.navigate()
       }
     }
   }
@@ -99,12 +90,12 @@
 </script>
 
 <style scoped lang="less">
-  @backgroundColor: #355477;
+  @backgroundColor: #777f7a;
   @secondaryColor: #1a222e;
   @paymentColor: #519d10;
   @medicalColor: #ee1f34;
-  @darkTR: #515B54;
-  @lightTR: #515B54;
+  @darkTR: #777f7a;
+  @lightTR: #777f7a;
   @textColor: #9fb0d6;
   @baseFontSize: 1em;
   @boldText: "Candara";
@@ -112,25 +103,29 @@
   @bodyText: "LiberationSans";
 
   .nav {
-    height: 84px;
-    background: #0c2069;
-    background-image: -webkit-linear-gradient(top, @lightTR, @darkTR);
-    background-image: -moz-linear-gradient(top, @lightTR, @darkTR);
-    background-image: -ms-linear-gradient(top, @lightTR, @darkTR);
-    background-image: -o-linear-gradient(top, @lightTR, @darkTR);
-    background-image: linear-gradient(to bottom, @lightTR, @darkTR);
+    height: 150px;
+    background: white;
     display: grid;
     grid-template-columns: 10px repeat(8, 1fr) 10px;
     z-index: 2;
-    box-shadow: 0px 6px 2px #d1d1d1;
+
   }
+  .sexy_line {
+    grid-column-start: 1;
+    grid-column-end: 10;
+    background: white;
+    background-image: -webkit-linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
+    background-image: linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
+    height: 1.5px;
+}
 
   .logo {
     background-image: url('../../assets/qwc-venumm.png');
     background-repeat: no-repeat;
-    grid-column-start: 3;
-    grid-column-end: 7;
+    grid-column-start: 4;
+    grid-column-end: 8;
     height: 400px;
+    margin-top: -130px;
     transform: scale(.30,.30)
   }
 
@@ -139,14 +134,14 @@
     margin-left: 40px;
     width: 100px;
     height: 100px;
+    transform: scale(.75,.75);
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
   .navButtonIcon {
     width: 80px;
     height: 80px;
-    transform: scale(.9,.9);
-    background: url("../../assets/navbuttonAnimationWhiteThin.svg");
+    background: url("../../assets/navbuttonAnimationWhite.svg");
     background-repeat: no-repeat;
   }
 
@@ -165,11 +160,6 @@
     margin: 10px 0;
     padding: 4px;
     background: #0c2069;
-      background-image: -webkit-linear-gradient(top, @darkTR, @lightTR);
-      background-image: -moz-linear-gradient(top, @darkTR, @lightTR);
-      background-image: -ms-linear-gradient(top, @darkTR, @lightTR);
-      background-image: -o-linear-gradient(top, @darkTR, @lightTR);
-      background-image: linear-gradient(to bottom, @darkTR, @lightTR);
     text-align: center;
     font-family: @boldText;
     font-size: @baseFontSize + 1em;
