@@ -112,7 +112,7 @@
   @bodyText: "LiberationSans";
 
   .nav {
-    height: 84px;
+    height: 90px;
     background: #0c2069;
     background-image: -webkit-linear-gradient(top, @lightTR, @darkTR);
     background-image: -moz-linear-gradient(top, @lightTR, @darkTR);
@@ -126,12 +126,12 @@
   }
 
   .logo {
-    background-image: url('../../assets/qwc-venumm.png');
+    background-image: url('../../assets/qwc-venummLow.png');
     background-repeat: no-repeat;
-    grid-column-start: 3;
-    grid-column-end: 7;
-    height: 400px;
-    transform: scale(.30,.30)
+    grid-column: 8;
+    margin-top: 6px;
+    height: 100px;
+    width: 100px;
   }
 
   .navButton {
