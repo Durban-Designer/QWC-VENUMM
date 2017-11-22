@@ -103,8 +103,18 @@
   @bodyText: "LiberationSans";
 
   .nav {
+<<<<<<< HEAD
     height: 150px;
     background: white;
+=======
+    height: 90px;
+    background: #0c2069;
+    background-image: -webkit-linear-gradient(top, @lightTR, @darkTR);
+    background-image: -moz-linear-gradient(top, @lightTR, @darkTR);
+    background-image: -ms-linear-gradient(top, @lightTR, @darkTR);
+    background-image: -o-linear-gradient(top, @lightTR, @darkTR);
+    background-image: linear-gradient(to bottom, @lightTR, @darkTR);
+>>>>>>> 86331cebe27d6dfd996b5004894009d3db804b7e
     display: grid;
     grid-template-columns: 10px repeat(8, 1fr) 10px;
     z-index: 2;
@@ -120,13 +130,20 @@
 }
 
   .logo {
-    background-image: url('../../assets/qwc-venumm.png');
+    background-image: url('../../assets/qwc-venummLow.png');
     background-repeat: no-repeat;
+<<<<<<< HEAD
     grid-column-start: 4;
     grid-column-end: 8;
     height: 400px;
     margin-top: -130px;
     transform: scale(.30,.30)
+=======
+    grid-column: 8;
+    margin-top: 6px;
+    height: 100px;
+    width: 100px;
+>>>>>>> 86331cebe27d6dfd996b5004894009d3db804b7e
   }
 
   .navButton {
@@ -141,7 +158,12 @@
   .navButtonIcon {
     width: 80px;
     height: 80px;
+<<<<<<< HEAD
     background: url("../../assets/navbuttonAnimationWhite.svg");
+=======
+    transform: scale(.9,.9);
+    background: url("../../assets/navbuttonAnimationGreenThin.svg");
+>>>>>>> 86331cebe27d6dfd996b5004894009d3db804b7e
     background-repeat: no-repeat;
   }
 
