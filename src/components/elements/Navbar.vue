@@ -152,7 +152,7 @@
     top: -2000px;
     width: 100%;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 26px;
     z-index: 1;
   }
 
@@ -163,13 +163,11 @@
     border-radius: 10px;
     margin: 20px 0;
     padding: 4px;
-    background: #0c2069;
     text-align: center;
     font-family: Helvetica;
     font-size: @baseFontSize + 1em;
     text-decoration: none;
     color: #FFF;
-
     z-index: 3;
     background-image: -webkit-linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
     background-image: linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
@@ -180,8 +178,8 @@
   }
 
   @keyframes activateNav {
-    from {top: -2000px;}
-    to {top: 90px;}
+    from {top: 60px; opacity: 0;}
+    to {top: 90px; opacity: 1;}
   }
 
   @keyframes activateNavtiles {
@@ -192,8 +190,8 @@
   }
 
   @keyframes deactivateNav {
-    0% {top: 80px;}
-    99% {top: 2000px;}
+    0% {top: 80px; opacity: 1;}
+    99% {top: 120px; opacity: 0;}
     100% {display: none;}
   }
 
