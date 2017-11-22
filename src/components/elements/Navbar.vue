@@ -146,7 +146,7 @@
     width: 80px;
     height: 80px;
     transform: scale(.9,.9);
-    background: url("../../assets/navbuttonAnimationGreenThin.svg");
+    background: url("../../assets/navbuttonAnimationDarkGreenThin.svg");
     background-repeat: no-repeat;
   }
 
