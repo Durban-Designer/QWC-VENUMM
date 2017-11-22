@@ -1,5 +1,6 @@
 <template>
   <div id="Navbar" class="nav">
+    <router-link to="../assets/qwc-venumm.png"><div class="logo"></div></router-link>
     <div v-on:click="navToggle" class="navButton">
       <center><div v-bind:class="navbutton" class="navButtonIcon"></div></center>
     </div>
@@ -9,7 +10,6 @@
         <router-link to="/firstarticle"><div v-on:click="navigate" v-bind:class="about">First Article</div></router-link>
       </center>
     </div>
-    <div class="logo"><router-link to="/"></router-link></div>
   </div>
 </template>
 
@@ -103,7 +103,6 @@
 
   .nav {
     height: 84px;
-    width: 100%;
     background: #0c2069;
     background-image: -webkit-linear-gradient(top, @lightTR, @darkTR);
     background-image: -moz-linear-gradient(top, @lightTR, @darkTR);
@@ -111,19 +110,18 @@
     background-image: -o-linear-gradient(top, @lightTR, @darkTR);
     background-image: linear-gradient(to bottom, @lightTR, @darkTR);
     display: grid;
-    grid-template-columns: 10px repeat(8, 1fr) 10px;
+    grid-template-columns: 10px repeat(3, 1fr) 10px;
     z-index: 2;
     box-shadow: 0px 6px 2px #d1d1d1;
   }
 
   .logo {
-    background-image: url('../../assets/qwc-venummLow.png');
     background-repeat: no-repeat;
     margin-top: 4px;
     margin-left: 10px;
-    grid-column: 9;
-    height: 100px;
-    width: 100px;
+    grid-column: 5;
+    height: 70px;
+    width: 240px;
   }
 
   .navButton {

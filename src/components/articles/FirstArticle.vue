@@ -28,7 +28,7 @@
 
 <script>
   export default {
-    name: 'firstArticle',
+    name: 'first article',
     data () {
       return {
       }
