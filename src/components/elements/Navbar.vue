@@ -5,16 +5,16 @@
     </div>
     <div v-bind:class="navpane" class="navpane">
       <center>
-        <router-link to="/about"><div v-on:click="navigate" v-bind:class="about">About</div></router-link>
-        <router-link to="/firstarticle"><div v-on:click="navigate" v-bind:class="about">First Article</div></router-link>
+        <router-link to="/about"><div v-on:click="aboutNav" v-bind:class="about">About</div></router-link>
+        <router-link to="/firstarticle"><div v-on:click="firstArticleNav" v-bind:class="about">First Article</div></router-link>
       </center>
     </div>
-    <div class="logo"><router-link to="/"></router-link></div>
+    <div class="logo" v-on:click="homeNav"></div>
   </div>
 </template>
 
 <script>
-  var x = 0
+  var x = false
   export default {
     name: 'Navbar',
     data: function () {
@@ -63,24 +63,34 @@
     },
     methods: {
       navToggle: function () {
-        // Nav button functionality
-        if (x === 0) {
-          x++
+        if (x === false) {
+          x = true
           this.isToggled = true
           this.first = false
-        } else if (x === 1) {
-          x--
+        } else if (x === true) {
+          x = false
           this.isToggled = false
         }
       },
+      homeNav: function () {
+        this.$router.push('/')
+        this.navigate()
+      },
+      aboutNav: function () {
+        this.$router.push('/about')
+        this.navigate()
+      },
+      firstArticleNav: function () {
+        this.$router.push('/firstarticle')
+        this.navigate()
+      },
       navigate: function () {
         this.isToggled = false
-        x--
+        x = false
       },
       logOut: function () {
-        this.isToggled = false
-        x--
         this.$emit('logOut')
+        this.navigate()
       }
     }
   }
@@ -130,13 +140,13 @@
     margin-left: 40px;
     width: 100px;
     height: 100px;
-    transform: scale(.75,.75);
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
   .navButtonIcon {
     width: 80px;
     height: 80px;
+    transform: scale(.9,.9);
     background: url("../../assets/navbuttonAnimationWhite.svg");
     background-repeat: no-repeat;
   }
