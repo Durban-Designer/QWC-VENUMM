@@ -103,7 +103,7 @@
   @bodyText: "LiberationSans";
 
   .nav {
-    height: 150px;
+    height: 110px;
     background: white;
     display: grid;
     grid-template-columns: 10px repeat(8, 1fr) 10px;
@@ -122,15 +122,16 @@
   .logo {
     background-image: url('../../assets/qwc-venummLow.png');
     background-repeat: no-repeat;
-    grid-column: 8;
-    margin-top: 6px;
+    grid-column-start: 6;
+    margin-top: 12px;
+    margin-right: 40px;
     height: 100px;
     width: 100px;
+    -webkit-filter: drop-shadow(1px 1px 1px  #222);
   }
 
   .navButton {
     grid-column: 2;
-    margin-left: 40px;
     width: 100px;
     height: 100px;
     transform: scale(.75,.75);
@@ -143,6 +144,7 @@
     transform: scale(.9,.9);
     background: url("../../assets/navbuttonAnimationGreenThin.svg");
     background-repeat: no-repeat;
+    -webkit-filter: drop-shadow(1px 2px 1px  #222);
   }
 
   .navpane {
@@ -157,16 +159,16 @@
     height: 40px;
     line-height: 40px;
     border-radius: 10px;
-    margin: 10px 0;
-    padding: 4px;
-    background: #0c2069;
+    margin: 5px 0;
     text-align: center;
-    font-family: @boldText;
+    font-family: Helvetica;
     font-size: @baseFontSize + 1em;
     text-decoration: none;
     color: #FFF;
-    border: 2px solid #fff;
+
     z-index: 3;
+    background-image: -webkit-linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
+    background-image: linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
   }
 
   .hidden {
