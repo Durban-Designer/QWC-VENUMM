@@ -10,7 +10,7 @@
       </center>
     </div>
     <div class="logo"><router-link to="/"></router-link></div>
-    <div class="sexy_line"></div>
+    <div class="sexyLine"></div>
   </div>
 </template>
 
@@ -110,7 +110,7 @@
     z-index: 2;
 
   }
-  .sexy_line {
+  .sexyLine {
     grid-column-start: 1;
     grid-column-end: 10;
     background: white;
