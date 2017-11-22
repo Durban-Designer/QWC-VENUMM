@@ -1,6 +1,6 @@
 <template>
   <div id="Navbar" class="nav">
-    <router-link to="/"><div class="logo" v-lazy:background-image='logo'></div></router-link>
+    <router-link to="/"><div class="logo"></div></router-link>
     <div v-on:click="navToggle" class="navButton">
       <center><div v-bind:class="navbutton" class="navButtonIcon"></div></center>
     </div>
