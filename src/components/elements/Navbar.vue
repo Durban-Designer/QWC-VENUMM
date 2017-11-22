@@ -116,13 +116,12 @@
   }
 
   .logo {
-    background-image: url('../../assets/qwc-venummLow.png');
+    background-image: url('../../assets/qwc-venumm.png');
     background-repeat: no-repeat;
-    margin-top: 4px;
-    margin-left: 100px;
-    grid-column: 8;
-    height: 100px;
-    width: 100px;
+    grid-column-start: 3;
+    grid-column-end: 7;
+    height: 400px;
+    transform: scale(.30,.30)
   }
 
   .navButton {
