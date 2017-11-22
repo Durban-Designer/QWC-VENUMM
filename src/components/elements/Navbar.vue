@@ -6,12 +6,8 @@
     </div>
     <div v-bind:class="navpane" class="navpane">
       <center>
-        <router-link to="/login"><div v-on:click="navigate" v-bind:class="login">Login</div></router-link>
-        <router-link to="/register"><div v-on:click="navigate" v-bind:class="login">Register</div></router-link>
-        <router-link to="/account"><div v-on:click="navigate" v-bind:class="logged">Account</div></router-link>
         <router-link to="/about"><div v-on:click="navigate" v-bind:class="about">About</div></router-link>
-        <router-link to="/call"><div v-on:click="navigate" v-bind:class="logged">Call</div></router-link>
-        <div v-on:click="logOut" v-bind:class="logged">Log Out</div>
+        <router-link to="/firstarticle"><div v-on:click="navigate" v-bind:class="about">First Article</div></router-link>
       </center>
     </div>
   </div>
