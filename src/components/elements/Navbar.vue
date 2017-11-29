@@ -1,18 +1,12 @@
 <template>
   <div id="Navbar" class="nav--top">
-<<<<<<< HEAD
-    <div v-on:click="homeNav" class="logo"></div>
+    <div class="logo"></div>
     <div  v-on:click="homeNav" class="home">HOME</div>
     <div  v-on:click="storeNav" class="store">Store</div>
-    <div  v-on:click="articlesNav" class="articles">ARTICLES</div>
-=======
-    <div class="logo"></div>
-    <div  v-on:click="homeNav" class="Home">HOME</div>
-    <div  v-on:click="aboutNav" class="about">ABOUT</div>
     <div  v-on:click="articlesToggle" class="articles">ARTICLES</div>
->>>>>>> b5d1069c4b071b91fa577675f1b0d78436233eb4
     <div class="sexyLine"></div>
     <div v-bind:class="navpaneLogic">
+      <div v-on:click="basicsNav" class="basics">Basics</div>
       <div v-on:click="quasarNav" class="quasar">Quasar</div>
       <div v-on:click="webpackNav" class="webpack">Webpack</div>
       <div v-on:click="cordovaNav" class="cordova">Cordova</div>
@@ -58,6 +52,9 @@
         } else if (this.articleToggle === true) {
           this.articleToggle = false
         }
+      },
+      basicsNav: function () {
+        this.$router.push('/basics')
       },
       quasarNav: function () {
         this.$router.push('/quasar')
