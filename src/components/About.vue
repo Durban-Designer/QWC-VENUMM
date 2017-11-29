@@ -13,9 +13,6 @@
       <li>MongoDb</li>
       <li>Mongoose</li>
     </ul>
-    <p>
-      
-    </p>
   </div>
 </template>
 

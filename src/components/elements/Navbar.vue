@@ -5,17 +5,17 @@
     </div>
     <div v-bind:class="navpane" class="navpane">
       <center>
-        <router-link to="/about"><div v-on:click="navigate" v-bind:class="about">About</div></router-link>
-        <router-link to="/firstarticle"><div v-on:click="navigate" v-bind:class="about">First Article</div></router-link>
+        <div v-on:click="aboutNav" v-bind:class="about">About</div>
+        <div v-on:click="firstArticleNav" v-bind:class="about">First Article</div>
       </center>
     </div>
-    <div class="logo"><router-link to="/"></router-link></div>
+    <div class="logo" v-on:click="homeNav"></div>
     <div class="sexyLine"></div>
   </div>
 </template>
 
 <script>
-  var x = 0
+  var x = false
   export default {
     name: 'Navbar',
     data: function () {
@@ -65,22 +65,34 @@
     methods: {
       navToggle: function () {
         // Nav button functionality
-        if (x === 0) {
-          x++
+        if (x === false) {
+          x = true
           this.isToggled = true
           this.first = false
-        } else if (x === 1) {
-          x--
+        } else if (x === true) {
+          x = false
           this.isToggled = false
         }
       },
+      homeNav: function () {
+        this.navigate()
+        this.$router.push('/')
+      },
+      firstArticleNav: function () {
+        this.navigate()
+        this.$router.push('/firstarticle')
+      },
+      aboutNav: function () {
+        this.navigate()
+        this.$router.push('/about')
+      },
       navigate: function () {
         this.isToggled = false
-        x--
+        x = false
       },
       logOut: function () {
         this.isToggled = false
-        x--
+        x = false
         this.$emit('logOut')
       }
     }
@@ -120,13 +132,13 @@
 }
 
   .logo {
-    background-image: url('../../assets/qwc-venummLow.png');
+    background-image: url('../../assets/qwc-venumm.svg');
     background-repeat: no-repeat;
     grid-column-start: 6;
     margin-top: 12px;
     margin-right: 40px;
     height: 100px;
-    width: 100px;
+    width: 200px;
     -webkit-filter: drop-shadow(1px 1px 1px  #222);
   }
 
