@@ -1,21 +1,14 @@
 <template>
-  <div id="Navbar" class="nav">
-    <div v-on:click="navToggle" class="navButton">
-      <center><div v-bind:class="navbutton" class="navButtonIcon"></div></center>
-    </div>
-    <div v-bind:class="navpane" class="navpane">
-      <center>
-        <div v-on:click="aboutNav" v-bind:class="about">About</div>
-        <div v-on:click="firstArticleNav" v-bind:class="about">First Article</div>
-      </center>
-    </div>
-    <div class="logo" v-on:click="homeNav"></div>
+  <div id="Navbar" class="nav--top">
+    <div class="logo"></div>
+    <div  v-on:click="homeNav" class="Home">HOME</div>
+    <div  v-on:click="aboutNav" class="about">ABOUT</div>
+    <div  v-on:click="articlesNav" class="articles">ARTICLES</div>
     <div class="sexyLine"></div>
   </div>
 </template>
 
 <script>
-  var x = false
   export default {
     name: 'Navbar',
     data: function () {
@@ -63,37 +56,14 @@
       }
     },
     methods: {
-      navToggle: function () {
-        // Nav button functionality
-        if (x === false) {
-          x = true
-          this.isToggled = true
-          this.first = false
-        } else if (x === true) {
-          x = false
-          this.isToggled = false
-        }
-      },
       homeNav: function () {
-        this.navigate()
         this.$router.push('/')
       },
-      firstArticleNav: function () {
-        this.navigate()
-        this.$router.push('/firstarticle')
-      },
       aboutNav: function () {
-        this.navigate()
         this.$router.push('/about')
       },
-      navigate: function () {
-        this.isToggled = false
-        x = false
-      },
-      logOut: function () {
-        this.isToggled = false
-        x = false
-        this.$emit('logOut')
+      articlesNav: function () {
+        this.$router.push('/firstarticle')
       }
     }
   }
@@ -114,157 +84,47 @@
   @sideText: "AdventPro";
   @bodyText: "LiberationSans";
 
-  .nav {
-    height: 110px;
-    background: white;
-    display: grid;
-    grid-template-columns: 10px repeat(8, 1fr) 10px;
-    z-index: 2;
-
-  }
-  .sexyLine {
-    grid-column-start: 1;
-    grid-column-end: 10;
-    background: white;
-    background-image: -webkit-linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
-    background-image: linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
-    height: 1.5px;
-}
-
-  .logo {
-    background-image: url('../../assets/qwc-venumm.svg');
-    background-repeat: no-repeat;
-    grid-column-start: 6;
-    margin-top: 12px;
-    margin-right: 40px;
-    height: 100px;
-    width: 200px;
-    -webkit-filter: drop-shadow(1px 1px 1px  #222);
-  }
-
-  .navButton {
-    grid-column: 2;
-    width: 100px;
-    height: 100px;
-    transform: scale(.75,.75);
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-  }
-
-  .navButtonIcon {
-    width: 80px;
-    height: 80px;
-    transform: scale(.9,.9);
-    background: url("../../assets/navbuttonAnimationGreenThin.svg");
-    background-repeat: no-repeat;
-    -webkit-filter: drop-shadow(1px 2px 1px  #222);
-  }
-
-  .navpane {
-    position: absolute;
-    top: -2000px;
-    width: 100%;
-    height: 100%;
-    margin-top: 26px;
-    z-index: 1;
-  }
-
-  .navtile {
-    width: 90%;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 10px;
-    margin: 20px 0;
-    padding: 4px;
+  .nav--top {
     text-align: center;
-    font-family: Helvetica;
-    font-size: @baseFontSize + 1em;
-    text-decoration: none;
-    color: #FFF;
-    z-index: 3;
-    background-image: -webkit-linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
-    background-image: linear-gradient(left, transparent 0%, #38B44A 30%, #38B44A 85%, transparent 100%);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 90px 40px;
+  }
+  .logo {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-image: url('../../assets/qwc-venummLow.svg');
+    background-repeat: no-repeat;
+    margin: 10px;
+
+  }
+  .Home {
+    font-family: century gothic;
+    font-size: 1.3em;
+    color: white;
+    line-height: 38px;
+    background-color: #1bad4a;
+    grid-row: 2;
+    grid-column: 1;
   }
 
-  .hidden {
-    display: none;
+  .articles{
+    font-family: century gothic;
+    font-size: 1.3em;
+    color: white;
+    line-height: 38px;
+    background-color: #1bad4a;
+    grid-row: 2;
+    grid-column: 2;
   }
 
-  @keyframes activateNav {
-    from {top: 60px; opacity: 0;}
-    to {top: 90px; opacity: 1;}
+  .about {
+    font-family: century gothic;
+    font-size: 1.3em;
+    color: white;
+    line-height: 38px;
+    background-color: #1bad4a;
+    grid-row: 2;
+    grid-column: 3;
   }
-
-  @keyframes activateNavtiles {
-    0% {margin: 10px 0;}
-    40% {margin: 22px 0;}
-    80% {margin: 12px 0;}
-    100% {margin: 12px 0;}
-  }
-
-  @keyframes deactivateNav {
-    0% {top: 80px; opacity: 1;}
-    99% {top: 120px; opacity: 0;}
-    100% {display: none;}
-  }
-
-  @keyframes deactivateNavtiles {
-    0% {margin: 12px 0;}
-    50% {margin: 18px 0;}
-    100% {margin: 26px 0;}
-  }
-
-  @keyframes navButtonAnimation {
-    100% {background-position: -1440px;}
-  }
-
-  @keyframes navButtonAnimationReverse {
-    0% {background-position: -1440px;}
-    100% {background-position: 0px;}
-  }
-
-  .navpaneAnimation {
-    animation-name: activateNav;
-    animation-duration: .8s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    display: inline;
-  }
-
-  .navtileAnimation {
-    animation-name: activateNavtiles;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-
-  .navpaneAnimationExit {
-    animation-name: deactivateNav;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-
-  .navtileAnimationExit {
-    animation-name: deactivateNavtiles;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-
-  .navButtonAnimation {
-    animation: navButtonAnimation .4s steps(18);
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-
-  .navButtonAnimationExit {
-    animation: navButtonAnimationReverse .5s steps(18);
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
 </style>
