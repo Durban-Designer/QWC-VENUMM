@@ -154,4 +154,7 @@
   .hidden {
     display: none;
   }
+  .navpaneLogic {
+    background-color: #1bad4a;
+  }
 </style>
