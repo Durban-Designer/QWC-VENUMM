@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h1>QWC-VENUMM The Basics</h1>
+    <h1>QWC-VENUMM<br/> The Basics</h1>
     <p>The Quick Venom stack refers to an application architecture based around nine core technologies;</p>
     <hr/>
     <ul>
@@ -221,5 +221,9 @@
 
   .link {
     text-decoration: underline;
+  }
+
+  h1 {
+    text-align: center;
   }
 </style>

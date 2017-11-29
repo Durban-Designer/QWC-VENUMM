@@ -1,11 +1,12 @@
 <template>
   <div id="Navbar" class="nav--top">
     <div class="logo"></div>
-    <div  v-on:click="homeNav" class="Home">HOME</div>
-    <div  v-on:click="aboutNav" class="about">ABOUT</div>
+    <div  v-on:click="homeNav" class="home">HOME</div>
+    <div  v-on:click="storeNav" class="store">Store</div>
     <div  v-on:click="articlesToggle" class="articles">ARTICLES</div>
     <div class="sexyLine"></div>
     <div v-bind:class="navpaneLogic">
+      <div v-on:click="basicsNav" class="basics">Basics</div>
       <div v-on:click="quasarNav" class="quasar">Quasar</div>
       <div v-on:click="webpackNav" class="webpack">Webpack</div>
       <div v-on:click="cordovaNav" class="cordova">Cordova</div>
@@ -42,6 +43,9 @@
       homeNav: function () {
         this.$router.push('/')
       },
+      storeNav: function () {
+        this.$router.push('/store')
+      },
       articlesToggle: function () {
         if (this.articleToggle === false) {
           this.articleToggle = true
@@ -49,8 +53,8 @@
           this.articleToggle = false
         }
       },
-      aboutNav: function () {
-        this.$router.push('/about')
+      basicsNav: function () {
+        this.$router.push('/basics')
       },
       quasarNav: function () {
         this.$router.push('/quasar')
@@ -86,7 +90,7 @@
         this.$router.push('/building')
       },
       articlesNav: function () {
-        this.$router.push('/firstarticle')
+        this.$router.push('/basics')
       }
     }
   }
@@ -121,7 +125,7 @@
     margin: 10px;
 
   }
-  .Home {
+  .home {
     font-family: century gothic;
     font-size: 1.3em;
     color: white;
@@ -141,7 +145,7 @@
     grid-column: 2;
   }
 
-  .about {
+  .store {
     font-family: century gothic;
     font-size: 1.3em;
     color: white;
