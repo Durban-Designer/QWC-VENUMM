@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const Home = () => import('@/components/Home')
-const FirstArticle = () => import('@/components/articles/FirstArticle')
+const Store = () => import('@/components/Store')
+const Basics = () => import('@/components/articles/Basics')
 const Quasar = () => import('@/components/articles/Quasar')
 const Webpack = () => import('@/components/articles/Webpack')
 const Cordova = () => import('@/components/articles/Cordova')
@@ -24,9 +25,14 @@ export default new Router({
       component: Home
     },
     {
-      path: '/firstarticle',
-      name: 'first article',
-      component: FirstArticle
+      path: '/store',
+      name: 'store',
+      component: Store
+    },
+    {
+      path: '/basics',
+      name: 'basics',
+      component: Basics
     },
     {
       path: '/quasar',

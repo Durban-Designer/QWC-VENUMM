@@ -1,8 +1,8 @@
 <template>
   <div id="Navbar" class="nav--top">
-    <div class="logo"></div>
-    <div  v-on:click="homeNav" class="Home">HOME</div>
-    <div  v-on:click="aboutNav" class="about">ABOUT</div>
+    <div v-on:click="homeNav" class="logo"></div>
+    <div  v-on:click="homeNav" class="home">HOME</div>
+    <div  v-on:click="storeNav" class="store">Store</div>
     <div  v-on:click="articlesNav" class="articles">ARTICLES</div>
     <div class="sexyLine"></div>
   </div>
@@ -13,57 +13,20 @@
     name: 'Navbar',
     data: function () {
       return {
-        isToggled: false,
-        first: true
       }
     },
     props: ['loggedNav'],
     computed: {
-      navbutton: function () {
-        return {
-          navButtonAnimation: this.isToggled,
-          navButtonAnimationExit: !this.isToggled && !this.first
-        }
-      },
-      navpane: function () {
-        return {
-          navpaneAnimation: this.isToggled,
-          navpaneAnimationExit: !this.isToggled && !this.first
-        }
-      },
-      about: function () {
-        return {
-          navtileAnimation: this.isToggled,
-          navtileAnimationExit: !this.isToggled && !this.first,
-          navtile: true
-        }
-      },
-      login: function () {
-        return {
-          hidden: this.loggedNav,
-          navtileAnimation: this.isToggled,
-          navtileAnimationExit: !this.isToggled && !this.first,
-          navtile: !this.loggedNav
-        }
-      },
-      logged: function () {
-        return {
-          hidden: !this.loggedNav,
-          navtileAnimation: this.isToggled,
-          navtileAnimationExit: !this.isToggled && !this.first,
-          navtile: this.loggedNav
-        }
-      }
     },
     methods: {
       homeNav: function () {
         this.$router.push('/')
       },
-      aboutNav: function () {
-        this.$router.push('/about')
+      storeNav: function () {
+        this.$router.push('/store')
       },
       articlesNav: function () {
-        this.$router.push('/firstarticle')
+        this.$router.push('/basics')
       }
     }
   }
@@ -98,7 +61,7 @@
     margin: 10px;
 
   }
-  .Home {
+  .home {
     font-family: century gothic;
     font-size: 1.3em;
     color: white;
@@ -118,7 +81,7 @@
     grid-column: 2;
   }
 
-  .about {
+  .store {
     font-family: century gothic;
     font-size: 1.3em;
     color: white;
