@@ -1,11 +1,12 @@
 <template>
   <div class="main">
+    mongodb
   </div>
 </template>
 
 <script>
   export default {
-    name: 'monodb',
+    name: 'mongodb',
     data () {
       return {
       }

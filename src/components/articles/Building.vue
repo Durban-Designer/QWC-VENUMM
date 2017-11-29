@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    building
   </div>
 </template>
 

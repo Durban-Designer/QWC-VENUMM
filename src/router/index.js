@@ -6,9 +6,9 @@ const FirstArticle = () => import('@/components/articles/FirstArticle')
 const Quasar = () => import('@/components/articles/Quasar')
 const Webpack = () => import('@/components/articles/Webpack')
 const Cordova = () => import('@/components/articles/Cordova')
-const Vue = () => import('@/components/articles/Vue')
+const VueComponent = () => import('@/components/articles/Vue')
 const Express = () => import('@/components/articles/Express')
-const Node = () => import('@/components/articles/Node')
+const NodeComponent = () => import('@/components/articles/Node')
 const Ubuntu = () => import('@/components/articles/Ubuntu')
 const Ubuntuhands = () => import('@/components/articles/UbuntuHands')
 const Mongodb = () => import('@/components/articles/Mongodb')
@@ -37,57 +37,57 @@ export default new Router({
     {
       path: '/quasar',
       name: 'quasar',
-      component: 'Quasar'
+      component: Quasar
     },
     {
       path: '/webpack',
       name: 'webpack',
-      component: 'Webpack'
+      component: Webpack
     },
     {
       path: '/cordova',
       name: 'cordova',
-      component: 'Cordova'
+      component: Cordova
     },
     {
       path: '/vue',
       name: 'vue',
-      component: 'Vue'
+      component: VueComponent
     },
     {
       path: '/express',
       name: 'express',
-      component: 'Express'
+      component: Express
     },
     {
       path: '/node',
       name: 'node',
-      component: 'Node'
+      component: NodeComponent
     },
     {
       path: '/ubuntu',
       name: 'ubuntu',
-      component: 'Ubuntu'
+      component: Ubuntu
     },
     {
       path: '/ubuntuhands',
       name: 'ubuntuhands',
-      component: 'Ubuntuhands'
+      component: Ubuntuhands
     },
     {
       path: '/mongodb',
       name: 'mongodb',
-      component: 'Mongodb'
+      component: Mongodb
     },
     {
       path: '/mongoose',
       name: 'mongoose',
-      component: 'Mongoose'
+      component: Mongoose
     },
     {
       path: '/building',
       name: 'building',
-      component: 'Building'
+      component: Building
     }
   ]
 })

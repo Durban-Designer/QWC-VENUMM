@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    ubuntu
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    node
   </div>
 </template>
 
