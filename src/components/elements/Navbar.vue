@@ -107,11 +107,12 @@
   @hoverColor: #1bad4a;
 
   .nav {
+    width: 100%;
+    height: 130px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 90px 40px;
-    background-size: auto;
     background-color: white;
   }
   .logo {
