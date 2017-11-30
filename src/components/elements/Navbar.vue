@@ -1,8 +1,8 @@
 <template>
   <div id="Navbar" class="nav--top">
-    <div class="logo"></div>
+    <div class="logo" v-on:click="homeNav"></div>
     <div  v-on:click="homeNav" class="home">HOME</div>
-    <div  v-on:click="storeNav" class="store">Store</div>
+    <div  v-on:click="storeNav" class="store">STORE</div>
     <div  v-on:click="articlesToggle" class="articles">ARTICLES</div>
     <div class="sexyLine"></div>
     <div v-bind:class="navpaneLogic">
@@ -35,6 +35,7 @@
       navpaneLogic: function () {
         return {
           hidden: !this.articleToggle,
+          navpaneAnimate: this.articleToggle,
           navpane: this.articleToggle
         }
       }
@@ -99,12 +100,7 @@
 </script>
 
 <style scoped lang="less">
-  @backgroundColor: #777f7a;
-  @secondaryColor: #1a222e;
-  @paymentColor: #519d10;
-  @medicalColor: #ee1f34;
-  @darkTR: #777f7a;
-  @lightTR: #777f7a;
+  @hoverColor: #1bad4a;
   @textColor: #9fb0d6;
   @baseFontSize: 1em;
   @boldText: "Candara";
@@ -118,12 +114,16 @@
     grid-template-rows: 90px 40px;
   }
   .logo {
-    grid-column-start: 1;
-    grid-column-end: 4;
     background-image: url('../../assets/qwc-venummLow.svg');
     background-repeat: no-repeat;
-    margin: 10px;
-
+    width: 400px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    z-index: 5;
+    line-height: 20px;
+    height: 120px;
+    width: 100%;
   }
   .home {
     font-family: century gothic;
@@ -133,6 +133,7 @@
     background-color: #1bad4a;
     grid-row: 2;
     grid-column: 1;
+    z-index: 3;
   }
 
   .articles{
@@ -143,6 +144,7 @@
     background-color: #1bad4a;
     grid-row: 2;
     grid-column: 2;
+    z-index: 3;
   }
 
   .store {
@@ -153,9 +155,131 @@
     background-color: #1bad4a;
     grid-row: 2;
     grid-column: 3;
+    z-index: 3;
   }
 
   .hidden {
     display: none;
+  }
+
+  .navpane {
+    width: 33%;
+    position: absolute;
+    top: 135px;
+    color: #fff;
+    margin-left: 30%;
+    z-index: 2;
+    font-family: century gothic;
+    padding: 5px;
+  }
+
+  .basics {
+    background-color: #0F6029;
+    line-height: 40px;
+  }
+  .basics:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+
+  .quasar {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .quasar:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .webpack {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .webpack:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .cordova {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .cordova:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .vue {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .vue:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .express {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .express:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .node {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .node:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .ubuntu {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .ubuntu:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .ubuntuhands {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .ubuntuhands:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .mongodb {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .mongodb:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .mongoose {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .mongoose:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  .building {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .building:hover {
+    background-color: @hoverColor;
+    color: white;
+  }
+  @keyframes navpaneAnimation {
+    0% {top: -2000px;}
+    80% {top: 150px; }
+    100%{top: 130px;}
+  }
+
+  .navpaneAnimate {
+    animation-name: navpaneAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
   }
 </style>
