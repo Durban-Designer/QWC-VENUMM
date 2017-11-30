@@ -104,7 +104,7 @@
     <h2>Set up</h2><hr/>
     <p>
       Ok so you have an idea of the technologies that make up Quick Venom and what they do,
-      but how do you actually build an application? Fear not padiwan for soon you will be all set up
+      but how do you actually build an application? Fear not padawan for soon you will be all set up
       and ready to go. But first we have to install some software, boring I know but all great craftsman
       need good tools.
     </p>
@@ -213,17 +213,45 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
+@headText: "century gothic";
+@bodyText: "arial";
+@mainColor: #1bad4a;
   .main {
     font-size: 1em;
     text-align: justify;
   }
 
-  .link {
-    text-decoration: underline;
-  }
-
   h1 {
     text-align: center;
+    font-family: @headText;
+    font-weight: lighter;
+    color: #1bad4a;
+  }
+
+  p {
+    font-family: @bodyText;
+  }
+
+  ul {
+    font-family: @headText;
+  }
+  .link {
+    color: #1bad4a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  h2 {
+    font-family: @headText;
+    color: @mainColor;
+  }
+  h3 {
+    font-family: @headText;
+    color: @mainColor;
+  }
+  h4 {
+    font-family: @bodyText;
+    color: grey;
+    text-decoration: none;
   }
 </style>

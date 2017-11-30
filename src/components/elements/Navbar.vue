@@ -1,10 +1,9 @@
 <template>
-  <div id="Navbar" class="nav--top">
-    <div class="logo"></div>
+  <div id="Navbar" class="nav">
+    <div class="logo" v-on:click="homeNav"></div>
     <div  v-on:click="homeNav" class="home">HOME</div>
-    <div  v-on:click="storeNav" class="store">Store</div>
+    <div  v-on:click="storeNav" class="store">STORE</div>
     <div  v-on:click="articlesToggle" class="articles">ARTICLES</div>
-    <div class="sexyLine"></div>
     <div v-bind:class="navpaneLogic">
       <div v-on:click="basicsNav" class="basics">Basics</div>
       <div v-on:click="quasarNav" class="quasar">Quasar</div>
@@ -35,6 +34,7 @@
       navpaneLogic: function () {
         return {
           hidden: !this.articleToggle,
+          navpaneAnimate: this.articleToggle,
           navpane: this.articleToggle
         }
       }
@@ -99,30 +99,28 @@
 </script>
 
 <style scoped lang="less">
-  @backgroundColor: #777f7a;
-  @secondaryColor: #1a222e;
-  @paymentColor: #519d10;
-  @medicalColor: #ee1f34;
-  @darkTR: #777f7a;
-  @lightTR: #777f7a;
-  @textColor: #9fb0d6;
-  @baseFontSize: 1em;
-  @boldText: "Candara";
-  @sideText: "AdventPro";
-  @bodyText: "LiberationSans";
+  @hoverColor: #1bad4a;
 
-  .nav--top {
+  .nav {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 90px 40px;
+    background-size: auto;
+    background-color: white;
   }
   .logo {
-    grid-column-start: 1;
-    grid-column-end: 4;
     background-image: url('../../assets/qwc-venummLow.svg');
     background-repeat: no-repeat;
-    margin: 10px;
+    background-size: auto;
+    background-position: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    z-index: 5;
+    height: auto;
+    width: 100%;
+    background-color: white;
 
   }
   .home {
@@ -133,6 +131,8 @@
     background-color: #1bad4a;
     grid-row: 2;
     grid-column: 1;
+    z-index: 3;
+
   }
 
   .articles{
@@ -143,6 +143,7 @@
     background-color: #1bad4a;
     grid-row: 2;
     grid-column: 2;
+    z-index: 3;
   }
 
   .store {
@@ -153,12 +154,164 @@
     background-color: #1bad4a;
     grid-row: 2;
     grid-column: 3;
+    z-index: 3;
   }
 
   .hidden {
     display: none;
   }
-  .navpaneLogic {
-    background-color: #1bad4a;
+
+  .navpane {
+    width: 33%;
+    position: absolute;
+    top: 135px;
+    color: #fff;
+    margin-left: 30%;
+    z-index: 2;
+    font-family: century gothic;
+    padding: 5px;
+  }
+
+  .basics {
+    background-color: #0F6029;
+    line-height: 40px;
+  }
+  .basics:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+  }
+
+  .quasar {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .quasar:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .webpack {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .webpack:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .cordova {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .cordova:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .vue {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .vue:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .express {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .express:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .node {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .node:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .ubuntu {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .ubuntu:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .ubuntuhands {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .ubuntuhands:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .mongodb {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .mongodb:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .mongoose {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .mongoose:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  .building {
+    line-height: 40px;
+    background-color: #0F6029;
+  }
+  .building:hover {
+    background-color: @hoverColor;
+    color: white;
+    font-size: 1.2em;
+
+  }
+  @keyframes activateNav {
+    0% {top: -2000px;}
+    80% {top: 150px; }
+    100%{top: 130px;}
+  }
+  @keyframes deactivateNav {
+    0% {top: 80px;}
+    99% {top: 2000px;}
+    100% {display: none;}
+  }
+  .navpaneAnimate {
+    animation-name: activateNav;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  .navpaneAnimateExit {
+    animation-name: deactivateNav;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 </style>
