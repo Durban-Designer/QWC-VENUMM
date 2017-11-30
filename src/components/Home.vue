@@ -31,7 +31,7 @@
   .main {
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(15,60px);
+    grid-template-rows: repeat(15, 60px);
     text-align: center;
   }
   h1 {
@@ -53,46 +53,64 @@
   }
 
   .quasar {
+    width: 100%;
+    height: 100%;
     grid-row: 6;
     grid-column: 1;
     margin: 5px;
   }
   .webpack {
+    width: 100%;
+    height: 100%;
     grid-row: 6;
     grid-column: 2;
     margin: 5px;
   }
   .cordova {
+    width: 100%;
+    height: 100%;
     grid-row: 6;
     grid-column: 3;
   }
   .vue {
+    width: 100%;
+    height: 100%;
     grid-row: 6;
     grid-column: 4;
     margin: 5px;
   }
   .express {
+    width: 100%;
+    height: 100%;
     grid-row: 6;
     grid-column: 5;
     margin-top: 12px;
   }
   .node {
+    width: 100%;
+    height: 100%;
     grid-row: 7;
     grid-column: 1;
     margin-top: 10px;
   }
   .ubuntu {
+    width: 100%;
+    height: 100%;
     grid-row: 7;
     grid-column: 2;
     padding-top: 15px;
     margin: 5px;
   }
   .mongodb {
+    width: 100%;
+    height: 100%;
     grid-row: 7;
     grid-column: 3;
     margin-top: 15px;
   }
   .mongoose {
+    width: 100%;
+    height: 100%;
     grid-row: 7;
     grid-column: 4;
     margin-top: 10px;
