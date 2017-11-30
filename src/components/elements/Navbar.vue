@@ -26,16 +26,18 @@
     name: 'Navbar',
     data: function () {
       return {
-        articleToggle: false
+        articleToggle: false,
+        first: true,
+        firstToggle: false
       }
     },
     props: ['loggedNav'],
     computed: {
       navpaneLogic: function () {
         return {
-          hidden: !this.articleToggle,
-          navpaneAnimate: this.articleToggle,
-          navpane: this.articleToggle
+          navpaneAnimateExit: this.articleToggle === false && this.first === false,
+          navpaneAnimate: this.articleToggle === true,
+          navpane: true
         }
       }
     },
@@ -48,6 +50,9 @@
       },
       articlesToggle: function () {
         if (this.articleToggle === false) {
+          if (this.first === true) {
+            this.first = false
+          }
           this.articleToggle = true
         } else if (this.articleToggle === true) {
           this.articleToggle = false
@@ -163,8 +168,8 @@
 
   .navpane {
     width: 33%;
+    top: -2000px;
     position: absolute;
-    top: 135px;
     color: #fff;
     margin-left: 30%;
     z-index: 2;
@@ -298,9 +303,9 @@
     100%{top: 130px;}
   }
   @keyframes deactivateNav {
-    0% {top: 80px;}
-    99% {top: 2000px;}
-    100% {display: none;}
+    0% {top: 130px; display: inline;}
+    99% {top: -2000px; display: inline;}
+    100% {top: -2000px; display: none;}
   }
   .navpaneAnimate {
     animation-name: activateNav;
