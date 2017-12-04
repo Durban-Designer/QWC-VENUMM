@@ -115,16 +115,18 @@
     grid-template-rows: 90px 40px;
     background-color: white;
   }
+
   .logo {
     background-image: url('../../assets/qwc-venummLow.svg');
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 5;
-    height: auto;
+    height: 100px;
     width: 100%;
     background-color: white;
 
