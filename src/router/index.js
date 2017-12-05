@@ -13,7 +13,6 @@ const Ubuntu = () => import('@/components/articles/Ubuntu')
 const Ubuntuhands = () => import('@/components/articles/UbuntuHands')
 const Mongodb = () => import('@/components/articles/Mongodb')
 const Mongoose = () => import('@/components/articles/Mongoose')
-const Building = () => import('@/components/articles/Building')
 
 Vue.use(Router)
 
@@ -83,11 +82,6 @@ export default new Router({
       path: '/mongoose',
       name: 'mongoose',
       component: Mongoose
-    },
-    {
-      path: '/building',
-      name: 'building',
-      component: Building
     }
   ]
 })

@@ -145,7 +145,7 @@
       Now if everything went properly your browser should automatically open and display the quasar logo. So now
       you have successfully set up a running quasar application, here's the best part it already installed and set up
       Vue, Express, and Webpack for you. You simply edit the .vue files in your components folder to build your application
-      <span class="link" v-on:click="buildingNav">click here</span> for more on setting up .vue files and components.
+      <span class="link" v-on:click="vueNav">click here</span> for more on setting up .vue files and components.
     </p>
     <h3>Wrapping with Cordova</h3>
     <p>
@@ -205,9 +205,6 @@
       },
       mongooseNav: function () {
         this.$router.push('/mongoose')
-      },
-      buildingNav: function () {
-        this.$router.push('/building')
       }
     }
   }

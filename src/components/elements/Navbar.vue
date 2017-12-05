@@ -16,7 +16,6 @@
       <div v-on:click="ubuntuHandsNav" class="ubuntuhands">Ubuntu Hands-On</div>
       <div v-on:click="mongodbNav" class="mongodb">MongoDB</div>
       <div v-on:click="mongooseNav" class="mongoose">Mongoose</div>
-      <div v-on:click="buildingNav" class="building">Building</div>
     </div>
   </div>
 </template>
@@ -27,8 +26,7 @@
     data: function () {
       return {
         articleToggle: false,
-        first: true,
-        firstToggle: false
+        first: true
       }
     },
     props: ['loggedNav'],
@@ -90,9 +88,6 @@
       },
       mongooseNav: function () {
         this.$router.push('/mongoose')
-      },
-      buildingNav: function () {
-        this.$router.push('/building')
       },
       articlesNav: function () {
         this.$router.push('/basics')
