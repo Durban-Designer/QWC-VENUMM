@@ -40,12 +40,6 @@
       }
     },
     methods: {
-      homeNav: function () {
-        this.$router.push('/')
-      },
-      storeNav: function () {
-        this.$router.push('/store')
-      },
       articlesToggle: function () {
         if (this.articleToggle === false) {
           if (this.first === true) {
@@ -56,41 +50,61 @@
           this.articleToggle = false
         }
       },
+      homeNav: function () {
+        this.$router.push('/')
+        this.articlesToggle()
+      },
+      storeNav: function () {
+        this.$router.push('/store')
+        this.articlesToggle()
+      },
       basicsNav: function () {
         this.$router.push('/basics')
+        this.articlesToggle()
       },
       quasarNav: function () {
         this.$router.push('/quasar')
+        this.articlesToggle()
       },
       webpackNav: function () {
         this.$router.push('/webpack')
+        this.articlesToggle()
       },
       cordovaNav: function () {
         this.$router.push('/cordova')
+        this.articlesToggle()
       },
       vueNav: function () {
         this.$router.push('/vue')
+        this.articlesToggle()
       },
       expressNav: function () {
         this.$router.push('/express')
+        this.articlesToggle()
       },
       nodeNav: function () {
         this.$router.push('/node')
+        this.articlesToggle()
       },
       ubuntuNav: function () {
         this.$router.push('/ubuntu')
+        this.articlesToggle()
       },
       ubuntuHandsNav: function () {
         this.$router.push('/ubuntuhands')
+        this.articlesToggle()
       },
       mongodbNav: function () {
         this.$router.push('/mongodb')
+        this.articlesToggle()
       },
       mongooseNav: function () {
         this.$router.push('/mongoose')
+        this.articlesToggle()
       },
       articlesNav: function () {
         this.$router.push('/basics')
+        this.articlesToggle()
       }
     }
   }
@@ -135,7 +149,6 @@
     grid-row: 2;
     grid-column: 1;
     z-index: 3;
-
   }
 
   .articles{
@@ -177,7 +190,7 @@
 
   .basics {
     background-color: #0F6029;
-    line-height: 40px;
+    line-height: 34px;
   }
   .basics:hover {
     background-color: @hoverColor;
@@ -186,7 +199,7 @@
   }
 
   .quasar {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .quasar:hover {
@@ -196,7 +209,7 @@
 
   }
   .webpack {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .webpack:hover {
@@ -206,7 +219,7 @@
 
   }
   .cordova {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .cordova:hover {
@@ -216,7 +229,7 @@
 
   }
   .vue {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .vue:hover {
@@ -226,7 +239,7 @@
 
   }
   .express {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .express:hover {
@@ -236,7 +249,7 @@
 
   }
   .node {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .node:hover {
@@ -246,7 +259,7 @@
 
   }
   .ubuntu {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .ubuntu:hover {
@@ -256,7 +269,7 @@
 
   }
   .ubuntuhands {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .ubuntuhands:hover {
@@ -266,7 +279,7 @@
 
   }
   .mongodb {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .mongodb:hover {
@@ -276,7 +289,7 @@
 
   }
   .mongoose {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .mongoose:hover {
@@ -286,7 +299,7 @@
 
   }
   .building {
-    line-height: 40px;
+    line-height: 34px;
     background-color: #0F6029;
   }
   .building:hover {
