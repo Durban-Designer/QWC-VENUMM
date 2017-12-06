@@ -51,7 +51,40 @@
       Congratulations you have succesfully connected into your Amazon Web Services instance, read on for how to configure it to run
       Quick Venom Applications.
     </p>
-
+    <h4>Terminal Time</h4>
+    <p>
+      In your terminal type in the following commands with your project name;<br/>
+      sudo apt-get update<br/>
+      sudo apt-get install npm<br/>
+      sudo apt-get install build-essential libssl-dev<br/>
+      curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh<br/>
+      source ~/.profile<br/>
+      nvm install 9.2.0<br/>
+      sudo apt-get install pm2 -g<br/>
+      sudo mkdir /var/www/projectname<br/>
+      sudo chmod 777 -R /var/www/projectname<br/>
+      this updates your list of available packages, installs nodejs and node package manager with Node Version Manager,
+      and installs pm2 which will enable us to run node applications for production. Then you make a new directory
+      for websites and change its permissions to allow you to copy in files over ssh with winScp. The -R flag tells
+      the chmod to run recursively. Now we have to use WinScp to copy our Quick Venom application over to the server
+      in the projectname folder. In Winscp in the Host name input put your public dns from your EC2 console, and in username
+      put ubuntu. Click advanced and on the left below SSH click Authentication, in the private key file box click
+      the three dots, navigate to your private key file and double click it. Click ok then save the configuration for later, below click login and if all
+      went well you should login and see a graphical representation of your servers directories. navigate to /var/www/projectname and copy
+      in your Quick Venom Application. Then re open your terminal so we can change directory into the project folder and install dependencies with;
+      sudo npm install -g quasar-cli<br/>
+      sudo chmod 777 -R /var/www/projectname<br/>
+      sudo cd /var/www/projectname<br/>
+      sudo npm install<br/>
+      sudo quasar dev<br/>
+      If all went well it should host the project and compile succesfully, to test go to your servers public ipv4 ip address
+      and it should display your application. If so hit ctrl + c to break the operation and then get read to add the app to pm2,
+      to do so simply run;<br/>
+      pm2 start build/dev-server.js -i 0 --name "projectname"<br/>
+      Now pm2 should keep the server up and running indefinetly even if the server reboots, or the application crashes.
+      This was my Ubuntu Server Tutorial for Quick Venom Applications I hope you enjoyed it, I will be writing more Articles
+      in this series in the future explorinjg more in depth the powerful role Ubuntu Server Plays in our Stack.
+    </p>
   </div>
 </template>
 
