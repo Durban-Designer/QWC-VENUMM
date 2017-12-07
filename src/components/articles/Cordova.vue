@@ -14,7 +14,7 @@
         <li>Make sure you are current on any dependensies you are using</li>
         <li>Check your config.xml and update with each added platform<li>
         <li>Always Quasar build first (making sure you are in the correct folders ie. outside the cordova folder)</li>
-      <ol>
+      </ol>
     </p>
     <div class="articleClose">
       <div class="bonImage"></div>
