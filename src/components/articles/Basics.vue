@@ -136,12 +136,12 @@
     </p>
     <p>
       To initialize a quasar project run;<br/>
-      <span class="code">quasar init default project_name</span>
-      where project_name = whatever you want to call your project. then;
-      <span class="code">cd project_name</span>
-      <span class="code">npm install</span>
-      Then after Node auto installs some dependencies and other packages you can run;
-      <span class="code">quasar dev</span>
+      <span class="code">quasar init default project_name</span><br/>
+      where project_name = whatever you want to call your project. then;<br/>
+      <span class="code">cd project_name</span><br/>
+      <span class="code">npm install</span><br/>
+      Then after Node auto installs some dependencies and other packages you can run;<br/>
+      <span class="code">quasar dev</span><br/>
       Now if everything went properly your browser should automatically open and display the quasar logo. So now
       you have successfully set up a running quasar application, here's the best part it already installed and set up
       Vue, Express, and Webpack for you. You simply edit the .vue files in your components folder to build your application
@@ -150,17 +150,18 @@
     <h3>Wrapping with Cordova</h3>
     <p>
       Now that you have Quasar configured and running you can wrap your application with cordova to deploy to
-      ios and Android platforms. If you installed cordova above with <span class="code">npm install -g cordova</span>
+      ios and Android platforms. If you installed cordova above with;<br/>
+     <span class="code">npm install -g cordova</span><br/>
       simply run; <br/>
-      <span class="code">quasar build</span><br/> To build for deployment.
-      <span class="code">quasar wrap cordova</span><br/> to wrap with cordova.
+      <span class="code">quasar build</span><br/> To build for deployment.<br/>
+      <span class="code">quasar wrap cordova</span><br/> to wrap with cordova.<br/>
       <span class="code">cd cordova</span><br/> to navigate to the cordova folder.
       Now you need to open up the config.xml in the cordova folder in Atom.
       You want to edit the id attribute of the widget tag, the string in the name tag,
       the string in the description tag, the email and href attributes of the author tag as
       well as the string within. Save and close it and then run;<br/>
-      <span class="code">cordova platform add android</span><br/> to add the android platform.
-      <span class="code">cordova build android</span><br/> to build for android.
+      <span class="code">cordova platform add android</span><br/> to add the android platform.<br/>
+      <span class="code">cordova build android</span><br/> to build for android.<br/>
       <span class="code">cordova run android</span><br/> to deploy to plugged in device/emulator.
       if it throws a <span class="error">Error: Cannot read property 'replace' of undefined</span> error <span class="link"><a href="https://stackoverflow.com/questions/44687476/cordova-android-emulator-cannot-read-property-replace-of-undefined">click here</a></span>
       If all went according to plan then you should have the emulator pop up and display the quasar logo in an app.
@@ -178,9 +179,9 @@
         which showcases his Eight Years of Graphic Design Experience and serves as a hub for all his Art past and present.
       </p>
       <div class="socialLinks">
-        <div class="linkedIn"><a href="https://www.linkedin.com/in/royce-birnbaum-233939145/">LinkedIn</a></div>
-        <div class="github"><a href="https://github.com/Durban-Designer">Github</a></div>
-        <div class="facebook"><a href="https://www.facebook.com/royce.birnbaum.5">Facebook</a></div>
+        <a class="link" href="https://www.linkedin.com/in/royce-birnbaum-233939145/">LinkedIn</a>
+        <a class="link" href="https://github.com/Durban-Designer">Github</a>
+        <a class="link" href="https://www.facebook.com/royce.birnbaum.5">Facebook</a>
       </div>
     </div>
   </div>
@@ -229,12 +230,22 @@
 </script>
 
 <style scoped lang="less">
-@headText: "verdana";
-@bodyText: "verdana";
-@mainColor: #1bad4a;
+  @headText: "verdana";
+  @bodyText: "verdana";
+  @mainColor: #1bad4a;
+
   .main {
     font-size: 1em;
     text-align: justify;
+  }
+
+  .code {
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
   }
 
   h1 {
@@ -246,31 +257,50 @@
   }
 
   p {
+    text-align: left;
+    line-height: 1.5em;
+    padding-left: 6%;
+    padding-right: 6%;
     font-family: @bodyText;
   }
 
   ul {
     font-family: @headText;
   }
+
+  .socialLinks {
+    text-align: center;
+  }
+
   .link {
     color: #1bad4a;
     text-decoration: none;
     font-weight: bold;
+    text-align: center;
+    margin-left: 5px;
   }
+
   h2 {
+    text-align: center;
     font-family: @headText;
     color: @mainColor;
   }
+
   h3 {
+    text-align: center;
     font-family: @headText;
     color: @mainColor;
   }
+
   h4 {
+    text-align: center;
     font-family: @bodyText;
     color: grey;
     text-decoration: none;
   }
+
   .articleClose {
     border: solid 1px #1bad4a;
   }
+  
 </style>

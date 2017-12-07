@@ -1,10 +1,13 @@
 <template>
   <div class="main">
     <h2>Quasar</h2>
-    <p>Quasar is such a simple but vital role in the QWC-VENUMM Webstack. It's fairly easy to install basically works all by itself beautifully. It sets up dev servers with hot reload, builds for production and tons of other great development tools and code minifying. For the exact process of how it is used in conjuncture with our other technologies <span class="link" v-on:click="vueNav">click here.</span></br>
-    So this article will be more of a resource page for more information on Quasar. Obviously one of the best and most clear resources will be <a href="http://quasar-framework.org/guide/" class="link">quasar-framework.org</a></br>
-   For updates and to show support for The fabulous creator of Quasar Framework; Razvan Stoenescu, you can visit the Quasar Patreon <a href="https://www.patreon.com/quasarframework" class="link">Here</a>.</p>
-    <div class="articlaClose">
+    <p>
+      Quasar plays a vital role in the QWC-VENUMM Webstack. It's fairly easy to install and works all by itself beautifully. It sets up dev servers with hot reload, builds for production and tons of other great development tools including code minifying.
+      For the exact process of how it is used in conjuncture with our other technologies <span class="link" v-on:click="vueNav">click here.</span></br>
+      This article will be more of a resource page for more information on Quasar. Obviously one of the best and most clear resources will be <a href="http://quasar-framework.org/guide/" class="link">quasar-framework.org</a></br>
+      For updates and to show support for The fabulous creator of Quasar Framework; Razvan Stoenescu, you can visit the Quasar Patreon <a href="https://www.patreon.com/quasarframework" class="link">Here</a>.
+    </p>
+    <div class="articleClose">
       <div class="krisImage"></div>
       <p>
         Kristoffer St.John is the Vice President of Screen Art Studios as well as the Art Director,
@@ -64,27 +67,39 @@
 </script>
 
 <style scoped lang="less">
+  @headText: "century gothic";
+  @bodyText: "arial";
+  @mainColor: #1bad4a;
 
-@headText: "century gothic";
-@bodyText: "arial";
-@mainColor: #1bad4a;
   .main {
     font-size: 1em;
     text-align: justify;
     font-family: verdana;
     width: 90%;
   }
+
   .socialLinks {
     text-align: center;
   }
-  .articlaClose {
+
+  .articleClose {
     border: solid 1px #1bad4a;
   }
-h2 {
-  color: #1bad4a;
-  text-align: center;
-  text-decoration: underline;
-}
+
+  h2 {
+    color: #1bad4a;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  p {
+    text-align: left;
+    line-height: 1.5em;
+    padding-left: 6%;
+    padding-right: 6%;
+    font-family: @bodyText;
+  }
+
   .link {
     color: #1bad4a;
     text-decoration: none;

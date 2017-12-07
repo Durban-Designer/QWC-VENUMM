@@ -95,9 +95,9 @@
         which showcases his Eight Years of Graphic Design Experience and serves as a hub for all his Art past and present.
       </p>
       <div class="socialLinks">
-        <div class="linkedIn"><a href="https://www.linkedin.com/in/royce-birnbaum-233939145/">LinkedIn</a></div>
-        <div class="github"><a href="https://github.com/Durban-Designer">Github</a></div>
-        <div class="facebook"><a href="https://www.facebook.com/royce.birnbaum.5">Facebook</a></div>
+        <a class="link" href="https://www.linkedin.com/in/royce-birnbaum-233939145/">LinkedIn</a>
+        <a class="link" href="https://github.com/Durban-Designer">Github</a>
+        <a class="link" href="https://www.facebook.com/royce.birnbaum.5">Facebook</a>
       </div>
     </div>
   </div>
@@ -125,28 +125,77 @@
 </script>
 
 <style scoped lang="less">
+  @headText: "verdana";
+  @bodyText: "verdana";
+  @mainColor: #1bad4a;
 
-  .main{
-    font-family: verdana;
+  .main {
+    font-size: 1em;
+    text-align: justify;
   }
-  h1 {
-    color: #1bad4a;
+
+  .code {
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
     text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: verdana;
+    font-weight: lighter;
+    color: #1bad4a;
     text-decoration: underline;
   }
-  h2 {
-    color: #1bad4a;
+
+  p {
+    text-align: left;
+    line-height: 1.5em;
+    padding-left: 6%;
+    padding-right: 6%;
+    font-family: @bodyText;
+  }
+
+  ul {
+    font-family: @headText;
+  }
+
+  .socialLinks {
     text-align: center;
   }
-  h4 {
-    color: #1bad4a;
-    text-align: center;
-  }
+
   .link {
-    text-decoration: none;
     color: #1bad4a;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 5px;
   }
+
+  h2 {
+    text-align: center;
+    font-family: @headText;
+    color: @mainColor;
+  }
+
+  h3 {
+    text-align: center;
+    font-family: @headText;
+    color: @mainColor;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: @bodyText;
+    color: grey;
+    text-decoration: none;
+  }
+
   .articleClose {
     border: solid 1px #1bad4a;
   }
+
 </style>
