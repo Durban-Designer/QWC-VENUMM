@@ -4,8 +4,19 @@
     <p>
       Quasar plays a vital role in the QWC-VENUMM Webstack. It's fairly easy to install and works all by itself beautifully. It sets up dev servers with hot reload, builds for production and tons of other great development tools including code minifying.
       For the exact process of how it is used in conjuncture with our other technologies <span class="link" v-on:click="vueNav">click here.</span></br>
+    </p>
+    <p>
       This article will be more of a resource page for more information on Quasar. Obviously one of the best and most clear resources will be <a href="http://quasar-framework.org/guide/" class="link">quasar-framework.org</a></br>
       For updates and to show support for The fabulous creator of Quasar Framework; Razvan Stoenescu, you can visit the Quasar Patreon <a href="https://www.patreon.com/quasarframework" class="link">Here</a>.
+    </p>
+    <p>
+      Quasar is loaded with helpful components out of the box. For one, they offer a wide variety of styling options and css assistance, allowing for some much cleaner and more efficient code. This is also true for just about every aspect of app development.
+      Layout, Navigation, Form inputs, animation, you name it, Quasar makes it better. Quasar is an indespensable tool for all your development needs and it will only stand to improve from here.
+      For an in depth look at all the different components you now have at your fingertips <a href="http://quasar-framework.org/components/" class="link">click here. </a>
+    </p>
+    <p>
+      Thank you for reading, I hope this article helps you form a richer understanding of the Quasar framework. Look forward to more articles on
+      this subject in the future as we take a deep dive into all of Quasars many features.
     </p>
     <div class="articleClose">
       <div class="krisImage"></div>
@@ -104,5 +115,12 @@
     color: #1bad4a;
     text-decoration: none;
     font-weight: bold;
+  }
+  .link:hover {
+    color: #3bdb6d;
+  }
+  p {
+    text-align: left;
+    margin-left: 10px;
   }
 </style>
