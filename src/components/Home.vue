@@ -2,15 +2,17 @@
   <div class="main">
     <h1>QWC-VENUMM<br/>(Quick Venom)</h1>
     <p>The Quick Venom stack refers to an application architecture based around nine core technologies; Quasar, Webpack, Cordova, Vue.js, Express, Node.js, Ubuntu, MongoDB, Mongoose.</p>
-    <img class="quasar" src="../assets/quasar.jpg"></img>
-    <img class="webpack" src="../assets/webpack.png"></img>
-    <img class="cordova" src="../assets/cordova.png"></img>
-    <img class="vue" src="../assets/vue.png"></img>
-    <img class="express" src="../assets/express.png"></img>
-    <img class="node" src="../assets/node.png"></img>
-    <img class="ubuntu" src="../assets/ubuntu.png"></img>
-    <img class="mongodb" src="../assets/mongodb.png"></img>
-    <img class="mongoose" src="../assets/mongoose.png"></img>
+    <div class="images">
+      <img class="quasar img" src="../assets/quasar.jpg"></img>
+      <img class="webpack img" src="../assets/webpack.png"></img>
+      <img class="cordova img" src="../assets/cordova.png"></img>
+      <img class="vue img" src="../assets/vue.png"></img>
+      <img class="express img" src="../assets/express.png"></img>
+      <img class="node img" src="../assets/node.png"></img>
+      <img class="ubuntu img" src="../assets/ubuntu.png"></img>
+      <img class="mongodb img" src="../assets/mongodb.png"></img>
+      <img class="mongoose img" src="../assets/mongoose.png"></img>
+    </div>
   </div>
 </template>
 
@@ -25,8 +27,8 @@
   </script>
 
   <style scoped lang="less">
-  @bodyText: "arial";
-  @headText: "Century gothic";
+  @bodyText:  'Montserrat', sans-serif;
+  @headText: 'Montserrat', sans-serif;
 
   .main {
     display: grid;
@@ -52,67 +54,17 @@
     grid-column-end: 6;
   }
 
-  .quasar {
-    width: 100%;
-    height: 100%;
+  .images {
     grid-row: 6;
-    grid-column: 1;
-    margin: 5px;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 150px;)
   }
-  .webpack {
+  .img {
     width: 100%;
-    height: 100%;
-    grid-row: 6;
-    grid-column: 2;
-    margin: 5px;
-  }
-  .cordova {
-    width: 100%;
-    height: 100%;
-    grid-row: 6;
-    grid-column: 3;
-  }
-  .vue {
-    width: 100%;
-    height: 100%;
-    grid-row: 6;
-    grid-column: 4;
-    margin: 5px;
-  }
-  .express {
-    width: 100%;
-    height: 100%;
-    grid-row: 6;
-    grid-column: 5;
-    margin-top: 12px;
-  }
-  .node {
-    width: 100%;
-    height: 100%;
-    grid-row: 7;
-    grid-column: 1;
-    margin-top: 10px;
-  }
-  .ubuntu {
-    width: 100%;
-    height: 100%;
-    grid-row: 7;
-    grid-column: 2;
-    padding-top: 15px;
-    margin: 5px;
-  }
-  .mongodb {
-    width: 100%;
-    height: 100%;
-    grid-row: 7;
-    grid-column: 3;
-    margin-top: 15px;
-  }
-  .mongoose {
-    width: 100%;
-    height: 100%;
-    grid-row: 7;
-    grid-column: 4;
-    margin-top: 10px;
+    margin-top: 50px;
   }
   </style>

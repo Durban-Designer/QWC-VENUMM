@@ -112,7 +112,7 @@
 
 <style scoped lang="less">
   @hoverColor: #1bad4a;
-
+  @headText: 'Montserrat', sans-serif;
   .nav {
     width: 100%;
     height: 130px;
@@ -139,7 +139,7 @@
 
   }
   .home {
-    font-family: century gothic;
+    font-family: @headText;
     font-size: 1.3em;
     color: white;
     line-height: 38px;
@@ -150,7 +150,7 @@
   }
 
   .articles{
-    font-family: century gothic;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.3em;
     color: white;
     line-height: 38px;
@@ -161,7 +161,7 @@
   }
 
   .store {
-    font-family: century gothic;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.3em;
     color: white;
     line-height: 38px;
@@ -182,7 +182,7 @@
     color: #fff;
     margin-left: 30%;
     z-index: 2;
-    font-family: century gothic;
+    font-family: 'Montserrat', sans-serif;
     padding: 5px;
   }
 
