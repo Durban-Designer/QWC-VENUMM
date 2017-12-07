@@ -17,20 +17,32 @@
     <hr/>
     <p>
       Each of these will be described in more detail below but before we dive into the specific technologies I want to talk a little bit about the amazing
-      functionality that is granted with this application stack. Firstly you can create rock solid and lightweight Single Page Applications easily and quickly thanks to
+      functionality that is granted with this application stack.
+    </p>
+    <p>
+      Firstly you can create rock solid and lightweight Single Page Applications easily and quickly thanks to
       templating in both Quasar and Vue. Secondarily thanks to Quasar you can wrap your web application with Cordova to create hybrid web applications that run on both
       IOS and Android. You can also wrap for electron and deploy to desktop computers allowing a true write once run anywhere mentality from one code base with just a
-      few simple tweaks. Add in the power of Node.js to provide package managment and you have a simple to learn quality architecture that will allow developers to pool
-      there efforts more effectively to produce quality performant software solutions to todays rapidly increasing marketplace. With all these promises you're probably thinking
-      "Durban it just cant be so! There is one team for every platform, that must have lag, its gonna be complicated, etc.." while fear not padiwan for once I show you the ease
-      of Quick Venom you wont be able to stop coding.
+      few simple tweaks.
+    </p>
+    <p>
+      Add in the power of Node.js to provide package managment and you have a simple to learn quality architecture that will allow developers to pool
+      there efforts more effectively to produce quality and performant software solutions for todays rapidly increasing market pace.
+    </p>
+    <p>
+      With all these promises you're probably thinking "Durban it just cant be so!
+      There is one team for every platform, that must have lag, its gonna be complicated, etc.."
+      well fear not padawan for once I show you the ease of Quick Venom you wont be able to stop coding.
     </p>
     <h2>Quasar</h2><hr/>
     <p>
       Quasar is a framework that allows the creation of highly Responsive Websites, Hybrid Mobile Apps, and Electron apps.
-      All this from the same exact codebase, with very minimal toying around on the backend. Quasar is one of my personal favorite
-      technologies because it is so incredibly powerful yet easy to use. With minimal commands you can have a website and
-      App built in a snap. To learn more about Quasar and how to configure it for use in a Quick Venom Application <span class="link" v-on:click="quasarNav">click here.</span>
+      All this from the same exact codebase, with very minimal toying around on the backend.
+    </p>
+    <p>
+      Quasar is one of my personal favorite technologies because it is so incredibly powerful yet easy to use.
+      With minimal commands you can have a website and App built in a snap. To learn more about Quasar and how
+      to configure it for use in a Quick Venom Application <span class="link" v-on:click="quasarNav">click here.</span>
     </p>
     <h2>Webpack</h2><hr/>
     <p>
@@ -40,22 +52,28 @@
     </p>
     <h2>Cordova</h2><hr/>
     <p>
-      Cordova wraps your web application and allows it to run as a Hybrid App on Ios and Android phones. As well
+      Cordova wraps your web application and allows it to run as a Hybrid App on iOS and Android phones. As well
       you can write plugins that allow you to access native code and functionality from within your web application.
       This also allows you to use web technologies as well as native technologies side by side to bring a truly inovative application
-      to market with only one team producing all platforms. As well with many premade Cordova plugins for things like
-      geolocation, photos, and bluetooth, as well as a rich community of user created plugins it truly brings huge
-      functionality to our application stack. To learn more about Cordova and how to configure it for use in a Quick Venom Application
-      <span class="link" v-on:click="cordovaNav">click here.</span>
+      to market with only one team producing all platforms.
+    </p>
+    <p>
+      With many premade Cordova plugins for things like geolocation, photos, and bluetooth,
+      as well as a rich community of user created plugins it truly brings huge functionality
+      to our application stack. To learn more about Cordova and how to configure it for use in a
+      Quick Venom Application <span class="link" v-on:click="cordovaNav">click here.</span>
     </p>
     <h2>Vue.js</h2><hr/>
     <p>
-      Vue is our Front End Framework providing a huge ammount of functionality. Firstly it provides a
+      Vue is our Front End Framework providing a huge amount of functionality. Firstly it provides a
       Single Page Application or SPA Architecture which is signifigantly more user friendly as it
       dynamically rerenders only what needs to change on navigation. As well as providing for
       highly efficient DOM node manipulation, and being an extremely lightweight package. Not only that but
       unlike Angular or React you dont have to learn much additional syntax to get started. You still use HTML,
-      CSS, and Javascript. Everything is Highly Componetized, so all your code for each piece of functionality
+      CSS, and Javascript.
+    </p>
+    <p>
+      Everything is Highly Componetized, so all your code for each piece of functionality
       is all in one .Vue file containing a Template, Script, and Style tags. You then layer these components of
       functionality to build your web application as a single page, no break in user engagement.
       I could go on and on about Vue.js as I absolutely love this framework, so if you are interested in learning
@@ -63,7 +81,7 @@
     </p>
     <h2>Express</h2><hr/>
     <p>
-      Express is our web server, it provides for ultra lightweight and simple configuration to run our
+      Express is our web server and Backend Framework, it provides for ultra lightweight and simple configuration to run our
       Quick Venom Application. This takes the built version Quasar spits out and serves it over whatever
       port you specify. You can even get fancy and configure endpoints and lots of other wacky backend stuff.
       To learn more about Express and how to set it up for use in Quick Venom Applications <span class="link" v-on:click="expressNav">click here</span>
@@ -72,7 +90,7 @@
     <p>
       Node.js is a package manager for configuring Javascript based applications, it is incredibly easy to use,
       and maintains a massive library of packages you can download and use in your Quick Venom Applications.
-      This serves as the backbone of your whole setup updating packages and installing dependencies with one
+      This serves as the backbone of your whole setup, updating packages and installing dependencies with one
       easy command. You'll have to learn more about Node.js to make a Quick Venom application, so
       <span class="link" v-on:click="nodeNav">click here</span> to learn all you need to know, you wont regret
       it.
@@ -97,7 +115,7 @@
     <p>
       Mongoose makes configuring the MongoDB backend quite a bit easier as well as allowing you
       to enforce a schema on a particular object. This allows you to enforce a little order on your NoSql database
-      while still maintaining your freedom to change later. It makes setting up a endpoint for a particular
+      while still maintaining your freedom to change later. It also makes setting up a endpoint for a particular
       object schema say a user account take signifigantly less time. To learn more about configuring Mongoose
       to work with your Quick Venom application <span class="link" v-on:click="mongooseNav">click here.</span>
     </p>
@@ -109,15 +127,15 @@
       need good tools.
     </p>
     <h3>Requirements</h3><hr/>
-    <h4 class="link"><a href="http://www.atom.io">Atom Text Editor</a></h4>
+    <a class="link" href="http://www.atom.io"><h3>Atom Text Editor</h3></a>
     <p>My personal favorite text editor, it has plugins for .vue components and has a nice dark color scheme.</p>
-    <h4 class="link"><a href="https://nodejs.org/en/">Node.js Package Manager</a></h4>
+    <a class="link" href="https://nodejs.org/en/"><h3>Node.js Package Manager</h3></a>
     <h3>Optional</h3><hr/>
-    <h4 class="link"><a href="https://developer.android.com/studio/index.html">Android Studio</a></h4>
+    <a class="link" href="https://developer.android.com/studio/index.html"><h3>Android Studio</h3></a>
     <p>You need the Andoroid SDK to build for Android, Android Studio Auto installs it.</p>
-    <h4 class="link"><a href="https://www.getpostman.com/">Postman</a></h4>
+    <a class="link" href="https://www.getpostman.com/"><h3>Postman</h3></a>
     <p>Postman is used to test your backend by configuring Get, Post, Update, and Delete queries to send to your API Backend</p>
-    <h4 class="link"><a href="https://desktop.github.com/">Github Desktop</a></h4>
+    <a class="link" href="https://desktop.github.com/"><h3>Github Desktop</h3></a>
     <p>Github Desktop helps with version control and sharing code with others.</p>
     <hr/>
     <h3>Step By Step</h3>
@@ -126,6 +144,8 @@
       to install the rest of our stack. Firstly we will want to open command prompt and install
       Quasar globally by running;<br/>
       <span class="code">npm install -g quasar-cli</span><br/>
+    </p>
+    <p>
       As well if you intend to make this website a hybrid web application install Cordova by running;<br/>
       <span class="code">npm install -g cordova</span><br/>
       now with Quasar installed globally we have to decide which starter kit to choose for our application
@@ -243,8 +263,14 @@
     background-color: black;
     color: white;
     width: 100%;
-    margin-left: 1%;
-    margin-right: 1%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 4%;
+    margin-right: 4%;
     text-align: center;
   }
 
@@ -262,6 +288,7 @@
     padding-left: 6%;
     padding-right: 6%;
     font-family: @bodyText;
+    margin-bottom: 10px;
   }
 
   ul {
@@ -274,7 +301,7 @@
 
   .link {
     color: #1bad4a;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
     text-align: center;
     margin-left: 5px;
@@ -302,5 +329,5 @@
   .articleClose {
     border: solid 1px #1bad4a;
   }
-  
+
 </style>
