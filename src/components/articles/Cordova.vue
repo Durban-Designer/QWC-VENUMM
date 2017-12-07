@@ -11,8 +11,9 @@
       Luckily Cordova handles the heavy lifting when it comes to implimentation providing an easy to follow instructional guide on their <a href="https://cordova.apache.org/">website</a>.
       When it comes to use with the QWC-VENUMM stack there are a few things to keep in mind:
       <ol>
-        <li>Make sure you are current on any dependensies you are using</li>
-        <li>Check your config.xml and update with each added platform<li>
+        <li>Use Quasar Wrap cordova to wrap your code for Cordova to use</li>
+        <li>Make sure you are current on any dependencies you are using</li>
+        <li>Check your config.xml and update with each added platform</li>
         <li>Always Quasar build first (making sure you are in the correct folders ie. outside the cordova folder)</li>
       </ol>
     </p>
