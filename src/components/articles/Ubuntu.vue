@@ -127,7 +127,7 @@
 <style scoped lang="less">
 
   .main{
-    font-family: verdana;
+    font-family: 'Montserrat', sans-serif;
   }
   h1 {
     color: #1bad4a;

@@ -26,7 +26,7 @@
     grid-row: 4;
     grid-column-start: 1;
     grid-column-end: 6;
-    font-family: verdana;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 100;
   }
   .qwc-venumm {

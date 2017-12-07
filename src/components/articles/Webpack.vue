@@ -57,8 +57,7 @@
 <style scoped lang="less">
 
   .main {
-    font-family: verdana;
-    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
 
   }
   h1 {
