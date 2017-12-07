@@ -250,10 +250,9 @@
 </script>
 
 <style scoped lang="less">
-  @headText: "verdana";
-  @bodyText: "verdana";
-  @mainColor: #1bad4a;
-
+@headText: 'Montserrat', sans-serif;
+@bodyText: 'Montserrat', sans-serif;
+@mainColor: #1bad4a;
   .main {
     font-size: 1em;
     text-align: justify;
@@ -275,8 +274,8 @@
   }
 
   h1 {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-family: verdana;
     font-weight: lighter;
     color: #1bad4a;
     text-decoration: underline;

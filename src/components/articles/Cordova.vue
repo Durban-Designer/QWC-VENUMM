@@ -30,9 +30,9 @@
   }
 </script>
 
-<style lang="less">
-  @headText: "verdana";
-  @bodyText: "verdana";
+<style scoped lang="less">
+  @headText: "Montserrat";
+  @bodyText: "Montserrat";
   @mainColor: #1bad4a;
 
   .main {

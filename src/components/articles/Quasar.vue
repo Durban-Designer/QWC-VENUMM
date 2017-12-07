@@ -79,13 +79,13 @@
 
 <style scoped lang="less">
   @headText: "century gothic";
-  @bodyText: "arial";
+  @bodyText: "Montserrat";
   @mainColor: #1bad4a;
 
   .main {
     font-size: 1em;
     text-align: justify;
-    font-family: verdana;
+    font-family: 'Montserrat', sans-serif;
     width: 90%;
   }
 
@@ -116,11 +116,14 @@
     text-decoration: none;
     font-weight: bold;
   }
+
   .link:hover {
     color: #3bdb6d;
   }
+
   p {
     text-align: left;
     margin-left: 10px;
   }
+  
 </style>

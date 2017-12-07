@@ -244,8 +244,8 @@
 </script>
 
 <style scoped lang="less">
-  @headText: "verdana";
-  @bodyText: "verdana";
+  @headText: "Montserrat";
+  @bodyText: "Montserrat";
   @mainColor: #1bad4a;
 
   .main {
@@ -298,6 +298,7 @@
     text-align: center;
     font-family: @headText;
     color: @mainColor;
+    text-decoration: underline;
   }
 
   h3 {

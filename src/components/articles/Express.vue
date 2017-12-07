@@ -47,8 +47,8 @@
 </script>
 
 <style scoped lang="less">
-  @headText: "verdana";
-  @bodyText: "verdana";
+  @headText: "Montserrat";
+  @bodyText: "Montserrat";
   @mainColor: #1bad4a;
 
   .main {
