@@ -52,11 +52,9 @@
       },
       homeNav: function () {
         this.$router.push('/')
-        this.articlesToggle()
       },
       storeNav: function () {
         this.$router.push('/store')
-        this.articlesToggle()
       },
       basicsNav: function () {
         this.$router.push('/basics')

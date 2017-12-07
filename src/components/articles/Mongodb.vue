@@ -2,6 +2,27 @@
   <div class="main">
     <h2>MongoDB</h2>
     <p>
+      The leading choice for NoSql Databases MongoDB serves to store all our data for our Quick Venom Applications,
+      This allows us to have persistent data stores that survive page refereshes, and to do more complex operations like
+      having users register for an account. Without a database the vast majority of non trivial applications are impossible so
+      as you can imagine understanding MongoDB and how to configure it is a tad bit important. For starters though you can use MongoDB
+      by itself just fine I will be using Mongoose to configure our actual connections and backend operations. This is
+      signifigantly easier than a vanilla Mongo setup and allows the defining of an object Schema. Now that you understand
+      that you're probably wondering what this tutorial is about, while thats easy we're setting up the actual Database itself on a
+      Mlab instance.
+    </p>
+    <h4>Requirements</h4><hr/>
+    <h5><a class="link" href="https://mlab.com/signup/">An Mlab Account</a></h5><br/>
+    <h4>Step By Step</h4>
+    <p>
+      After Logging into your Mlab account you should see a large MongoDb Deployments header, click create new to the far
+      right of it to get started. Click Amazon web Services and Sandbox then press the blue continue button on the bottom right.
+      Select the closest AWS region to you and then click continue again, type a name for your database into the Database Name input box.
+      Click Continue and then Submit Order, if all went well it should show up below your MongoDB deployments header. Click on the new database
+      then click on the Users tab in the middle of the screen. Click the Add Database User button and make sure not to use one of your regular passwords
+      as this will be exposed in the code. Congratulations you have successfully spun up a MongoDB server and in our
+      Mongoose tutorial I will walk you through connecting and using Mongoose to configure an object Schema for your database.
+      <span class="link" v-on:click="$router.push('/mongoose')">Click Here</span> to read it now!
     </p>
     <div class="articleClose">
       <div class="royceImage"></div>

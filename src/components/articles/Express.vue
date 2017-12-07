@@ -2,7 +2,22 @@
   <div class="main">
     <h2>Express</h2>
     <p>
+      Express is a lightweight, unopinionated Web Framework for setting up node.js applications.
+      Handling HTTP utility methods, middleware, and serving functionality, Express makes all our
+      applications' functionality possible. Express is primarily utilized when setting up your backend API servers
+      or other technologies like Mongoose. They sit on top of Express and work together to handle our Get, Post, Update, and Delete functions
+      for our API endpoints. I will be going more in depth on this in our Mongoose and MongoDB Tutorials where we set up a basic
+      Mlab instance and use Mongoose to configure our object Schema. <span class="link" v-on:click="$router.push('/mongodb')">Click Here</span> for
+      the MongoDB Article to get started on configuring a back end; otherwise continue reading for more on Express.
     </p>
+    <h4>Back on Track</h4><hr/>
+    <p>
+      Great! So we know Express is the *best thing ever*, but now what? Well lucky for you, Quasar does a wonderful job
+      templating applications. If you followed my <span class="link" v-on:click="$router.push('/basics')">Quick Venom Basics Tutorial</span>
+      Express is preconfigured with Hot-Reload Middleware, Webpack, and to serve the built application over a web server. So To configure Express for use with
+      your Quick Venom Application you have to do precisely nothing. Yay! Thank the Devs who came before and made this super easy for us all.
+      Anyways, I hope you enjoyed this brief look at Express. Thanks for reading and be sure to check out our other Articles for more
+      information on Quick Venom, the Quintessential Web Stack.
     <div class="articleClose">
       <div class="royceImage"></div>
       <p>
