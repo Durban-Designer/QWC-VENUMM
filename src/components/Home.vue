@@ -33,7 +33,7 @@
   .main {
     display: grid;
     grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(15, 60px);
+    grid-template-rows: repeat(12, 60px);
     text-align: center;
   }
   h1 {
