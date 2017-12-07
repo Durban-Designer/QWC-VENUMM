@@ -2,6 +2,19 @@
   <div class="main">
     <h2>Cordova</h2>
     <p>
+      Granting the ability to deploy to 7 operating systems using one codebase is no small feat. Initially Quasar creates a symlink allowing your code to be accessed.
+      Cordova then acts as a browser interpreting the initial codebase (HTML,CSS and Javascript) and native plugins/APIs,
+      essentially bridging the gap between both systems.
+    </p>
+    <h2>Setup and Use</h2>
+    <p>
+      Luckily Cordova handles the heavy lifting when it comes to implimentation providing an easy to follow instructional guide on their <a href="https://cordova.apache.org/">website</a>.
+      When it comes to use with the QWC-VENUMM stack there are a few things to keep in mind:
+      <ol>
+        <li>Make sure you are current on any dependensies you are using</li>
+        <li>Check your config.xml and update with each added platform<li>
+        <li>Always Quasar build first (making sure you are in the correct folders ie. outside the cordova folder)</li>
+      <ol>
     </p>
     <div class="articleClose">
       <div class="bonImage"></div>
