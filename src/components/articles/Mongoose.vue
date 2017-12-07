@@ -213,7 +213,7 @@
       body { 'exampleString':'example'} it should store in the database no problem and when you run a get with its id
       it should return the string 'example', I hope this has shed a little light on configuring a backend with mongoose
       for storing persistent data, look forward to more articles in the future going more in depth into how to use Mongoose
-      with your Quick Venom Application. 
+      with your Quick Venom Application.
     </p>
     <div class="articleClose">
       <div class="royceImage"></div>
@@ -243,5 +243,25 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
+.main{
+  font-family: verdana;
+}
+h2 {
+  color: #1bad4a;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h4 {
+  color: #1bad4a;
+  text-align: center;
+}
+.link {
+  text-decoration: none;
+  color: #1bad4a;
+}
+.articleClose {
+  border: solid 1px #1bad4a;
+}
 </style>

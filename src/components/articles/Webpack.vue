@@ -36,9 +36,9 @@
         which showcases his Eight Years of Graphic Design Experience and serves as a hub for all his Art past and present.
       </p>
       <div class="socialLinks">
-        <div class="linkedIn"><a href="https://www.linkedin.com/in/royce-birnbaum-233939145/">LinkedIn</a></div>
-        <div class="github"><a href="https://github.com/Durban-Designer">Github</a></div>
-        <div class="facebook"><a href="https://www.facebook.com/royce.birnbaum.5">Facebook</a></div>
+        <div class="link"><a href="https://www.linkedin.com/in/royce-birnbaum-233939145/">LinkedIn</a></div>
+        <div class="link"><a href="https://github.com/Durban-Designer">Github</a></div>
+        <div class="link"><a href="https://www.facebook.com/royce.birnbaum.5">Facebook</a></div>
       </div>
     </div>
   </div>
@@ -54,5 +54,27 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
+
+  .main {
+    font-family: verdana;
+    text-align: justify;
+
+  }
+  h1 {
+    color: #1bad4a;
+    text-align: center;
+    text-decoration: underline;
+  }
+  h3 {
+    color: #1bad4a;
+    text-align: center;
+  }
+  .link {
+    color: #1bad4a;
+    text-decoration: none;
+  }
+  .articleClose {
+    border: solid 1px #1bad4a;
+  }
 </style>

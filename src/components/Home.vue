@@ -26,7 +26,7 @@
 
   <style scoped lang="less">
   @bodyText: "arial";
-  @headText: "Century gothic";
+  @headText: "verdana";
 
   .main {
     display: grid;

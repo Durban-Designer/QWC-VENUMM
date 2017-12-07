@@ -52,5 +52,28 @@
   }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
+.main{
+  font-family: verdana;
+}
+h2 {
+  color: #1bad4a;
+  text-align: center;
+  text-decoration: underline;
+}
+h4 {
+  color: #1bad4a;
+  text-align: center;
+}
+h5 {
+  color: #1bad4a;
+  text-align: center;
+}
+.link {
+  text-decoration: none;
+  color: #1bad4a;
+}
+.articleClose {
+  border: solid 1px #1bad4a;
+}
 </style>

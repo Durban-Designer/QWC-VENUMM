@@ -139,7 +139,7 @@
 
   }
   .home {
-    font-family: century gothic;
+    font-family: Verdana;
     font-size: 1.3em;
     color: white;
     line-height: 38px;
@@ -150,7 +150,7 @@
   }
 
   .articles{
-    font-family: century gothic;
+    font-family: verdana;
     font-size: 1.3em;
     color: white;
     line-height: 38px;
@@ -161,7 +161,7 @@
   }
 
   .store {
-    font-family: century gothic;
+    font-family: verdana;
     font-size: 1.3em;
     color: white;
     line-height: 38px;
@@ -182,7 +182,7 @@
     color: #fff;
     margin-left: 30%;
     z-index: 2;
-    font-family: century gothic;
+    font-family: verdana;
     padding: 5px;
   }
 

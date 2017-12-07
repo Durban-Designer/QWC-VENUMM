@@ -124,8 +124,29 @@
   }
 </script>
 
-<style lang="less">
-  .link {
+<style scoped lang="less">
+
+  .main{
+    font-family: verdana;
+  }
+  h1 {
+    color: #1bad4a;
+    text-align: center;
     text-decoration: underline;
+  }
+  h2 {
+    color: #1bad4a;
+    text-align: center;
+  }
+  h4 {
+    color: #1bad4a;
+    text-align: center;
+  }
+  .link {
+    text-decoration: none;
+    color: #1bad4a;
+  }
+  .articleClose {
+    border: solid 1px #1bad4a;
   }
 </style>
