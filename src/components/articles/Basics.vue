@@ -229,8 +229,8 @@
 </script>
 
 <style scoped lang="less">
-@headText: "century gothic";
-@bodyText: "arial";
+@headText: "verdana";
+@bodyText: "verdana";
 @mainColor: #1bad4a;
   .main {
     font-size: 1em;
@@ -239,9 +239,10 @@
 
   h1 {
     text-align: center;
-    font-family: @headText;
+    font-family: verdana;
     font-weight: lighter;
     color: #1bad4a;
+    text-decoration: underline;
   }
 
   p {
@@ -268,5 +269,8 @@
     font-family: @bodyText;
     color: grey;
     text-decoration: none;
+  }
+  .articleClose {
+    border: solid 1px #1bad4a;
   }
 </style>
