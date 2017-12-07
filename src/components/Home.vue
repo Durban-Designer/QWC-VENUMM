@@ -26,45 +26,45 @@
   }
   </script>
 
-  <style scoped lang="less">
-  @bodyText:  'Montserrat', sans-serif;
-  @headText: 'Montserrat', sans-serif;
+<style scoped lang="less">
+@bodyText:  'Montserrat', sans-serif;
+@headText: 'Montserrat', sans-serif;
 
-  .main {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(15, 60px);
-    text-align: center;
-  }
-  h1 {
-    text-align: center;
-    font-family: @headText;
-    font-weight: lighter;
-    color: #1bad4a;
-    grid-row: 1;
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
-  p {
-    font-family: @bodyText;
-    font-size: 1.2em;
-    text-align: center;
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
+.main {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(15, 60px);
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-family: @headText;
+  font-weight: lighter;
+  color: #1bad4a;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+p {
+  font-family: @bodyText;
+  font-size: 1.2em;
+  text-align: center;
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
 
-  .images {
-    grid-row: 6;
-    grid-row-end: 10;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 150px;)
-  }
-  .img {
-    width: 100%;
-    margin-top: 50px;
-  }
-  </style>
+.images {
+  grid-row: 6;
+  grid-row-end: 10;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 150px;)
+}
+.img {
+  width: 100%;
+  margin-top: 50px;
+}
+</style>
