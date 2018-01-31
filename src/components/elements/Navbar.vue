@@ -1,21 +1,21 @@
 <template>
   <div id="Navbar" class="nav">
-    <div class="logo" v-on:click="homeNav"></div>
-    <div  v-on:click="homeNav" class="home">HOME</div>
-    <div  v-on:click="storeNav" class="store">STORE</div>
-    <div  v-on:click="articlesToggle" class="articles">ARTICLES</div>
+    <div class="logo" v-on:click="$router.push('/')"></div>
+    <div  v-on:click="$router.push('/')" class="home">HOME</div>
+    <div  v-on:click="$router.push('/store')" class="store">STORE</div>
+    <div  v-on:click="articlesToggle()" class="articles">ARTICLES</div>
     <div v-bind:class="navpaneLogic">
-      <div v-on:click="basicsNav" class="basics">Basics</div>
-      <div v-on:click="quasarNav" class="quasar">Quasar</div>
-      <div v-on:click="webpackNav" class="webpack">Webpack</div>
-      <div v-on:click="cordovaNav" class="cordova">Cordova</div>
-      <div v-on:click="vueNav" class="vue">Vue.js</div>
-      <div v-on:click="expressNav" class="express">Express</div>
-      <div v-on:click="nodeNav" class="node">Node.js</div>
-      <div v-on:click="ubuntuNav" class="ubuntu">Ubuntu</div>
-      <div v-on:click="ubuntuHandsNav" class="ubuntuhands">Ubuntu Hands-On</div>
-      <div v-on:click="mongodbNav" class="mongodb">MongoDB</div>
-      <div v-on:click="mongooseNav" class="mongoose">Mongoose</div>
+      <div v-on:click="articlesToggle(); $router.push('/basics')" class="basics">Basics</div>
+      <div v-on:click="articlesToggle(); $router.push('/quasar')" class="quasar">Quasar</div>
+      <div v-on:click="articlesToggle(); $router.push('/webpack')" class="webpack">Webpack</div>
+      <div v-on:click="articlesToggle(); $router.push('/cordova')" class="cordova">Cordova</div>
+      <div v-on:click="articlesToggle(); $router.push('/vue')" class="vue">Vue.js</div>
+      <div v-on:click="articlesToggle(); $router.push('/express')" class="express">Express</div>
+      <div v-on:click="articlesToggle(); $router.push('/node')" class="node">Node.js</div>
+      <div v-on:click="articlesToggle(); $router.push('/ubuntu')" class="ubuntu">Ubuntu</div>
+      <div v-on:click="articlesToggle(); $router.push('/ubuntuhands')" class="ubuntuhands">Ubuntu Hands-On</div>
+      <div v-on:click="articlesToggle(); $router.push('/mongodb')" class="mongodb">MongoDB</div>
+      <div v-on:click="articlesToggle(); $router.push('/mongoose')" class="mongoose">Mongoose</div>
     </div>
   </div>
 </template>
@@ -49,60 +49,6 @@
         } else if (this.articleToggle === true) {
           this.articleToggle = false
         }
-      },
-      homeNav: function () {
-        this.$router.push('/')
-      },
-      storeNav: function () {
-        this.$router.push('/store')
-      },
-      basicsNav: function () {
-        this.$router.push('/basics')
-        this.articlesToggle()
-      },
-      quasarNav: function () {
-        this.$router.push('/quasar')
-        this.articlesToggle()
-      },
-      webpackNav: function () {
-        this.$router.push('/webpack')
-        this.articlesToggle()
-      },
-      cordovaNav: function () {
-        this.$router.push('/cordova')
-        this.articlesToggle()
-      },
-      vueNav: function () {
-        this.$router.push('/vue')
-        this.articlesToggle()
-      },
-      expressNav: function () {
-        this.$router.push('/express')
-        this.articlesToggle()
-      },
-      nodeNav: function () {
-        this.$router.push('/node')
-        this.articlesToggle()
-      },
-      ubuntuNav: function () {
-        this.$router.push('/ubuntu')
-        this.articlesToggle()
-      },
-      ubuntuHandsNav: function () {
-        this.$router.push('/ubuntuhands')
-        this.articlesToggle()
-      },
-      mongodbNav: function () {
-        this.$router.push('/mongodb')
-        this.articlesToggle()
-      },
-      mongooseNav: function () {
-        this.$router.push('/mongoose')
-        this.articlesToggle()
-      },
-      articlesNav: function () {
-        this.$router.push('/basics')
-        this.articlesToggle()
       }
     }
   }
