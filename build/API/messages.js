@@ -14,7 +14,7 @@ router.post("/", (req,res) => {
   name: req.body.name,
   email: req.body.email,
   message: req.body.message,
-  article: req.body.article
+  article: req.body.article,
   time: req.body.time
   })
 
