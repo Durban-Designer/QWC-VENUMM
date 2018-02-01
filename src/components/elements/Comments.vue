@@ -1,7 +1,10 @@
 <template>
   <div class="main">
     <div class="commentList" v-for="comment in comments">
-      <h5 class="comment">{{comment.message}}</h5>
+      <h5 class="commentName">{{comment.name}}</h5>
+      <h5 class="timeOne">{{comment.time.day}}/{{comment.time.month}}</h5>
+      <h5 class="timeTwo">{{comment.time.hour}}:{{comment.time.minute}}</h5>
+      <h5 class="commentMessage">{{comment.message}}</h5>
     </div>
     <div class="commentBox" v-if="commentBox">
       <input class="name" placeholder="name" v-model="name"></input>
@@ -91,7 +94,7 @@ export default {
       vue.time.hour = time.getHours()
       vue.time.minute = time.getMinutes()
       vue.time.day = time.getDate()
-      vue.time.month = time.getMonth()
+      vue.time.month = time.getMonth() + 1
       vue.clockTime = vue.time.hours + ':' + vue.time.minute + '  ' + vue.time.day + '/' + vue.time.month
     }
   }
@@ -103,6 +106,40 @@ export default {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 30px);
+  }
+
+  .commentList {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 30px);
+  }
+
+  .commentName {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .timeOne {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .timeTwo {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  .commentMessage {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
   }
 
   .name {

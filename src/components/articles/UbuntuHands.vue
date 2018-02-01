@@ -4,7 +4,6 @@
     <p>
       The Ubuntu Hands on Article is coming soon!
     </p>
-    <comments :article="'ubuntuHands'"></comments>
     <div class="articleClose">
       <div class="royceImage"></div>
       <p>
@@ -20,6 +19,7 @@
         <a class="link" href="https://www.facebook.com/royce.birnbaum.5">Facebook</a>
       </div>
     </div>
+    <comments :article="'ubuntuHands'"></comments>
   </div>
 </template>
 
