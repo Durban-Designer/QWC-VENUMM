@@ -34,7 +34,7 @@ export default {
     }
   },
   methods: {
-    populateLeads () {
+    populateComments () {
       let vue = this
       axios.get('' + vue.page, {headers: { 'Authorization': 'JWT ' + vue.user.token }})
         .then(function (response) {
