@@ -5,12 +5,12 @@ var port = 81;
 var app = express();
 var router = express.Router();
 var path = __dirname + "/views/";
-require("./user");
+require("./message");
 var messages = require("./messages.js");
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect("mongodb://user:123@ds133136.mlab.com:33136/test-quickvenumm", {
+mongoose.connect("mongodb://admin:123@ds133136.mlab.com:33136/test-quickvenumm", {
   useMongoClient: true
 }, function (error) {
   console.log(error);

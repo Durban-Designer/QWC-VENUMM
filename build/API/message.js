@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var MessagesSchema = new mongoose.Schema({
+var MessageSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -11,9 +11,9 @@ var MessagesSchema = new mongoose.Schema({
     day: String,
     hour: String,
     minute: String
-  }
+  },
+  article: String
 })
 
-var Messages = mongoose.model("Messages", MessagesSchema);
-
-module.exports = Messages;
+var Message = mongoose.model("Message", MessageSchema);
+module.exports = Message;

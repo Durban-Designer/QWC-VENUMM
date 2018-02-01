@@ -6,9 +6,11 @@
   },
   "dependencies": {
     "express": "^4.16.1",
-    "mongo": "^0.1.0",
     "lodash": "^4.17.4",
+    "mongo": "^0.1.0",
     "mongodb": "^2.2.31",
-    "mongoose": "^4.11.14"
+    "mongoose": "^4.11.14",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1"
   }
 }
