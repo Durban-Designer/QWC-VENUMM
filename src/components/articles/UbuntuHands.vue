@@ -2,6 +2,7 @@
   <div class="main">
     <h2>Ubuntu Hands On</h2>
     <p>
+      The Ubuntu Hands on Article is coming soon!
     </p>
     <div class="articleClose">
       <div class="royceImage"></div>

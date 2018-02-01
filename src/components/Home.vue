@@ -3,15 +3,15 @@
     <h1>QWC-VENUMM<br/>(Quick Venom)</h1>
     <p>The Quick Venom stack refers to an application architecture based around nine core technologies; Quasar, Webpack, Cordova, Vue.js, Express, Node.js, Ubuntu, MongoDB, Mongoose.</p>
     <div class="images">
-      <img class="quasar img" src="../assets/quasar.jpg"></img>
-      <img class="webpack img" src="../assets/webpack.png"></img>
-      <img class="cordova img" src="../assets/cordova.png"></img>
-      <img class="vue img" src="../assets/vue.png"></img>
-      <img class="express img" src="../assets/express.png"></img>
-      <img class="node img" src="../assets/node.png"></img>
-      <img class="ubuntu img" src="../assets/ubuntu.png"></img>
-      <img class="mongodb img" src="../assets/mongodb.png"></img>
-      <img class="mongoose img" src="../assets/mongoose.png"></img>
+      <a href="http://quasar-framework.org/"><img class="quasar img" src="../assets/quasar.jpg"></img></a>
+      <a href="https://webpack.js.org/"><img class="webpack img" src="../assets/webpack.png"></img></a>
+      <a href="https://cordova.apache.org/"><img class="cordova img" src="../assets/cordova.png"></img></a>
+      <a href="https://vuejs.org/"><img class="vue img" src="../assets/vue.png"></img></a>
+      <a href="https://expressjs.com/"><img class="express img" src="../assets/express.png"></img></a>
+      <a href="https://nodejs.org/en/"><img class="node img" src="../assets/node.png"></img></a>
+      <a href="https://www.ubuntu.com/server"><img class="ubuntu img" src="../assets/ubuntu.png"></img></a>
+      <a href="https://www.mongodb.com/"><img class="mongodb img" src="../assets/mongodb.png"></img></a>
+      <a href="http://mongoosejs.com/"><img class="mongoose img" src="../assets/mongoose.png"></img></a>
     </div>
   </div>
 </template>

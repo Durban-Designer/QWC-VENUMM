@@ -2,6 +2,7 @@
   <div class="main">
     <h2>Node.js</h2>
     <p>
+      Node.js Article Coming Soon!
     </p>
     <div class="articleClose">
       <div class="averyImage"></div>

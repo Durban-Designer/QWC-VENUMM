@@ -54,7 +54,7 @@
     <p>
       Cordova wraps your web application and allows it to run as a Hybrid App on iOS and Android phones. As well
       you can write plugins that allow you to access native code and functionality from within your web application.
-      This also allows you to use web technologies as well as native technologies side by side to bring a truly inovative application
+      This also allows you to use web technologies and native technologies side by side to bring a truly inovative application
       to market with only one team producing all platforms.
     </p>
     <p>
@@ -185,6 +185,8 @@
       <span class="code">cordova run android</span><br/> to deploy to plugged in device/emulator.
       if it throws a <span class="error">Error: Cannot read property 'replace' of undefined</span> error <span class="link"><a href="https://stackoverflow.com/questions/44687476/cordova-android-emulator-cannot-read-property-replace-of-undefined">click here</a></span>
       If all went according to plan then you should have the emulator pop up and display the quasar logo in an app.
+    </p>
+    <p>
       This has been the Quick Venom Basics Tutorial, I hope it shed some light on how to set up the
       default template. For further information check out our other Articles where we take a look at each technology
       in detail.
