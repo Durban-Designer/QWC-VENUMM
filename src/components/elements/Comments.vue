@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="commentList" v-for="comment in comments">
-      <h5 class="comment"></h5>
+      <h5 class="comment">{{comment.message}}</h5>
     </div>
     <div class="commentBox" v-if="commentBox">
       <input class="name" placeholder="name" v-model="name"></input>
@@ -18,6 +18,7 @@
 import axios from 'axios'
 export default {
   name: 'comments',
+  props: ['article'],
   data () {
     return {
       commentBox: false,
@@ -33,10 +34,14 @@ export default {
       }
     }
   },
+  created () {
+    let vue = this
+    vue.populateComments()
+  },
   methods: {
     populateComments () {
       let vue = this
-      axios.get('' + vue.page, {headers: { 'Authorization': 'JWT ' + vue.user.token }})
+      axios.get('http://13.57.14.36:81/messages/' + vue.article)
         .then(function (response) {
           vue.comments = response.data
           if (vue.comments.length === 8) {
@@ -63,14 +68,16 @@ export default {
     },
     submitMessage () {
       let vue = this
-      axios.post('', {
+      axios.post('http://13.57.14.36:81/messages', {
         name: vue.name.toLowerCase(),
         email: vue.email,
         message: vue.message,
-        time: vue.time
+        time: vue.time,
+        article: vue.article
       })
         .then(function (message) {
           vue.success = true
+          vue.populateComments()
           console.log(message)
         })
         .catch(function (error) {

@@ -14,8 +14,8 @@ router.post("/", (req,res) => {
   name: req.body.name,
   email: req.body.email,
   message: req.body.message,
-  time: req.body.time,
   article: req.body.article
+  time: req.body.time
   })
 
   newMessage.save((err, result) => {

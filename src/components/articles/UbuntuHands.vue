@@ -4,7 +4,7 @@
     <p>
       The Ubuntu Hands on Article is coming soon!
     </p>
-    <comments></comments>
+    <comments :article="'ubuntuHands'"></comments>
     <div class="articleClose">
       <div class="royceImage"></div>
       <p>
