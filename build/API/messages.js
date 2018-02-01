@@ -37,11 +37,8 @@ app.use(bodyParser.json());
 router.post("/", (req,res) => {
   var newMessage = new Message({
   name: req.body.name,
-  phone: req.body.phone,
   email: req.body.email,
-  status: req.body.status,
   message: req.body.message,
-  leadId: req.body.leadId,
   time: req.body.time
   })
 
