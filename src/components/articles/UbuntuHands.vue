@@ -4,6 +4,7 @@
     <p>
       The Ubuntu Hands on Article is coming soon!
     </p>
+    <comments></comments>
     <div class="articleClose">
       <div class="royceImage"></div>
       <p>
@@ -23,8 +24,12 @@
 </template>
 
 <script>
+  import Comments from '../elements/Comments'
   export default {
     name: 'ubuntuhands',
+    components: {
+      'comments': Comments
+    },
     data () {
       return {
       }
