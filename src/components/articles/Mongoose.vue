@@ -257,6 +257,7 @@
     background-color: black;
     color: white;
     width: 100%;
+    height: 240px;
     margin-left: 1%;
     margin-right: 1%;
     text-align: center;
