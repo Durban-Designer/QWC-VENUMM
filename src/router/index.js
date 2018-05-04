@@ -1,87 +1,24 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-const Home = () => import('@/components/Home')
-const Store = () => import('@/components/Store')
-const Basics = () => import('@/components/articles/Basics')
-const Quasar = () => import('@/components/articles/Quasar')
-const Webpack = () => import('@/components/articles/Webpack')
-const Cordova = () => import('@/components/articles/Cordova')
-const VueComponent = () => import('@/components/articles/Vue')
-const Express = () => import('@/components/articles/Express')
-const NodeComponent = () => import('@/components/articles/Node')
-const Ubuntu = () => import('@/components/articles/Ubuntu')
-const Ubuntuhands = () => import('@/components/articles/UbuntuHands')
-const Mongodb = () => import('@/components/articles/Mongodb')
-const Mongoose = () => import('@/components/articles/Mongoose')
+import VueRouter from 'vue-router'
 
-Vue.use(Router)
+import routes from './routes'
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/store',
-      name: 'store',
-      component: Store
-    },
-    {
-      path: '/basics',
-      name: 'basics',
-      component: Basics
-    },
-    {
-      path: '/quasar',
-      name: 'quasar',
-      component: Quasar
-    },
-    {
-      path: '/webpack',
-      name: 'webpack',
-      component: Webpack
-    },
-    {
-      path: '/cordova',
-      name: 'cordova',
-      component: Cordova
-    },
-    {
-      path: '/vue',
-      name: 'vue',
-      component: VueComponent
-    },
-    {
-      path: '/express',
-      name: 'express',
-      component: Express
-    },
-    {
-      path: '/node',
-      name: 'node',
-      component: NodeComponent
-    },
-    {
-      path: '/ubuntu',
-      name: 'ubuntu',
-      component: Ubuntu
-    },
-    {
-      path: '/ubuntuhands',
-      name: 'ubuntuhands',
-      component: Ubuntuhands
-    },
-    {
-      path: '/mongodb',
-      name: 'mongodb',
-      component: Mongodb
-    },
-    {
-      path: '/mongoose',
-      name: 'mongoose',
-      component: Mongoose
-    }
-  ]
+Vue.use(VueRouter)
+
+const Router = new VueRouter({
+  /*
+   * NOTE! Change Vue Router mode from quasar.conf.js -> build -> vueRouterMode
+   *
+   * When going with "history" mode, please also make sure "build.publicPath"
+   * is set to something other than an empty string.
+   * Example: '/' instead of ''
+   */
+
+  // Leave as is and change from quasar.conf.js instead!
+  mode: process.env.VUE_ROUTER_MODE,
+  base: process.env.VUE_ROUTER_BASE,
+  scrollBehavior: () => ({ y: 0 }),
+  routes
 })
+
+export default Router

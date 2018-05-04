@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Navbar from './components/elements/Navbar'
+import Navbar from './pages/elements/Navbar'
 export default {
   name: 'app',
   components: {
@@ -16,4 +16,7 @@ export default {
 </script>
 
 <style>
+  h1 {
+    font-size: 2em;
+  }
 </style>
