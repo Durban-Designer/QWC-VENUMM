@@ -3,7 +3,7 @@
     <div class="logo" v-on:click="$router.push('/')"></div>
     <button  v-on:click="$router.push('/')" class="home">Home</button>
     <button  v-on:click="$router.push('/store')" class="store">Store</button>
-    <button  v-on:click="articlesToggle()" class="articles">Articles</button>
+    <button  v-on:click="articlesToggle()" class="articles">Contents</button>
     <div v-bind:class="navpaneLogic">
       <div v-on:click="articlesToggle(); $router.push('/basics')" class="basics">Basics</div>
       <div v-on:click="articlesToggle(); $router.push('/quasar')" class="quasar">Quasar</div>
@@ -136,7 +136,7 @@ document.addEventListener('touchstart', function () {}, true)
     background-color: #555;
     z-index: 1;
     display: grid;
-    grid-template-rows: repeat(11, 4vh;)
+    grid-template-rows: repeat(11, 5vh;)
   }
 
   .basics {
@@ -278,5 +278,11 @@ document.addEventListener('touchstart', function () {}, true)
     animation-duration: .5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  }
+  @media (min-width: 700px) {
+    .navpane {
+      width: 80vw;
+      margin-left: 10vw;
+    }
   }
 </style>

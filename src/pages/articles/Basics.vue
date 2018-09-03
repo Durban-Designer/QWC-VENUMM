@@ -265,6 +265,27 @@ export default {
     overflow-y: scroll;
     padding-bottom: 100vh;
   }
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+      height:5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px transparent;
+      border: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #333;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
 
   .code {
     background-color: black;

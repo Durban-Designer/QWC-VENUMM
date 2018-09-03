@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h1>QWC-VENUMM<br/>(Quick Venom)</h1>
+    <h1>QWC-VENUMM (Quick Venom)</h1>
     <p>The Quick Venom stack refers to an application architecture based around nine core technologies:<br/> Quasar, Webpack, Cordova, Vue.js, Express, Node.js, Ubuntu, MongoDB, Mongoose.</p>
     <div class="images">
       <div class="quasar"></div>
@@ -41,11 +41,32 @@ export default {
     overflow-y: scroll;
     padding-bottom: 50vh;
   }
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+      height:5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px transparent;
+      border: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #333;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
   h1 {
     text-align: center;
     color: #333;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 400;
     grid-row: 1;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -66,7 +87,7 @@ export default {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: center;
   padding: 2vh;
   color: #444;
