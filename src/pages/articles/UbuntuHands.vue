@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2>Ubuntu Hands On</h2>
+    <h1>Ubuntu Hands On</h1>
     <p>
       The Ubuntu Hands on Article is coming soon!
     </p>
@@ -45,23 +45,34 @@ export default {
   .main {
     font-size: 1em;
     text-align: justify;
+    position: fixed;
+    height: 100%;
+    background-image:url('../../assets/noise2.jpg');
+    width: 100vw;
+    overflow-y: scroll;
+    padding-bottom: 100vh;
   }
 
   .code {
     background-color: black;
     color: white;
     width: 100%;
-    margin-left: 1%;
-    margin-right: 1%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 4%;
+    margin-right: 4%;
     text-align: center;
   }
 
   h1 {
     text-align: center;
-    font-family: verdana;
-    font-weight: lighter;
-    color: #1bad4a;
-    text-decoration: underline;
+    color: #333;
+    font-weight: 300;
+    font-size: 2em;
   }
 
   p {
@@ -69,11 +80,10 @@ export default {
     line-height: 1.5em;
     padding-left: 6%;
     padding-right: 6%;
-    font-family: @bodyText;
+    margin-bottom: 10px;
   }
 
   ul {
-    font-family: @headText;
   }
 
   .socialLinks {
@@ -81,9 +91,9 @@ export default {
   }
 
   .link {
-    color: #1bad4a;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 300;
     text-align: center;
     margin-left: 5px;
   }
@@ -106,9 +116,12 @@ export default {
     color: grey;
     text-decoration: none;
   }
-
-  .articleClose {
-    border: solid 1px #1bad4a;
+  @media (min-width: 700px) {
+    .main {
+      width: 80vw;
+      margin-left: 10vw;
+      box-shadow: 0px 0px 5px black;
+    }
   }
 
 </style>

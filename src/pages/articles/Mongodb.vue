@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2>MongoDB</h2>
+    <h1>MongoDB</h1>
     <p>
       The leading choice for NoSql Databases MongoDB serves to store all our data for our Quick Venom Applications,
       This allows us to have persistent data stores that survive page refereshes, and to do more complex operations like
@@ -11,9 +11,9 @@
       that you're probably wondering what this tutorial is about, while thats easy we're setting up the actual Database itself on a
       Mlab instance.
     </p>
-    <h4>Requirements</h4><hr/>
+    <h1>Requirements</h1><hr/>
     <h5><a class="link" href="https://mlab.com/signup/">An Mlab Account</a></h5><br/>
-    <h4>Step By Step</h4>
+    <h1>Step By Step</h1>
     <p>
       After Logging into your Mlab account you should see a large MongoDb Deployments header, click create new to the far
       right of it to get started. Click Amazon web Services and Sandbox then press the blue continue button on the bottom right.
@@ -60,23 +60,34 @@ export default {
   .main {
     font-size: 1em;
     text-align: justify;
+    position: fixed;
+    height: 100%;
+    background-image:url('../../assets/noise2.jpg');
+    width: 100vw;
+    overflow-y: scroll;
+    padding-bottom: 100vh;
   }
 
   .code {
     background-color: black;
     color: white;
     width: 100%;
-    margin-left: 1%;
-    margin-right: 1%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 4%;
+    margin-right: 4%;
     text-align: center;
   }
 
   h1 {
     text-align: center;
-    font-family: verdana;
-    font-weight: lighter;
-    color: #1bad4a;
-    text-decoration: underline;
+    color: #333;
+    font-weight: 300;
+    font-size: 2em;
   }
 
   p {
@@ -84,11 +95,10 @@ export default {
     line-height: 1.5em;
     padding-left: 6%;
     padding-right: 6%;
-    font-family: @bodyText;
+    margin-bottom: 10px;
   }
 
   ul {
-    font-family: @headText;
   }
 
   .socialLinks {
@@ -96,9 +106,9 @@ export default {
   }
 
   .link {
-    color: #1bad4a;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 300;
     text-align: center;
     margin-left: 5px;
   }
@@ -121,9 +131,11 @@ export default {
     color: grey;
     text-decoration: none;
   }
-
-  .articleClose {
-    border: solid 1px #1bad4a;
+  @media (min-width: 700px) {
+    .main {
+      width: 80vw;
+      margin-left: 10vw;
+      box-shadow: 0px 0px 5px black;
+    }
   }
-
 </style>

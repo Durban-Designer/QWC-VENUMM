@@ -7,13 +7,13 @@
       If you are interested in setting up your own local Ubuntu Server on a Desktop computer
       <span class="link" v-on:click="ubuntuHandsNav">click here.</span>
     </p>
-    <h2>Requirements</h2><hr/>
+    <h1>Requirements</h1><hr/>
     <ul>
       <li><a class="link" href="http://www.putty.org/">Putty</a> - An ssh client for accessing your server.</li>
       <li><a class="link" href="https://winscp.net/eng/download.php">WinScp</a> - A visual file system browser for accessing your server.</li>
       <li><a class="link" href="https://aws.amazon.com/">An Amazon Web Services Account</a></li>
     </ul>
-    <h2>Step By Step</h2>
+    <h1>Step By Step</h1>
     <p>
       Log in to Amazon Web Services and from your dashboard click on the ec2 link to go to your
       ec2 managment console. Click on the large blue launch instance button, then scroll until you
@@ -36,14 +36,14 @@
       ssh into your server with putty. Now open back up your AWS and click the big blue Launch Instances button
       in the lower right corner to send your server live.
     </p><hr/>
-    <h4>Momentary break</h4><hr/>
+    <h1>Momentary break</h1><hr/>
     <p>
       Ok so we have spun up our amazon web server, and downloaded our RSA keys to access her. (yes servers are a she.)
       Now we can log in with Putty and configure all of our Quick Venom dependencies. So before we get into launching
       your application you need to have one built. So if you still haven't gone through our basics tutorial
       <span class="link" v-on:click="basicsNav">click here.</span>
     </p>
-    <h4>Back on Track</h4><hr/>
+    <h1>Back on Track</h1><hr/>
     <p>
       In your Amazon Web Services window click on the view instances button in your EC2 managment console. Copy your Public DNS (IPv4)
       for your instance and then open up putty. In host type ubuntu@ then paste in the public DNS it should looks something like;<br/>
@@ -56,7 +56,7 @@
       Congratulations you have succesfully connected into your Amazon Web Services instance, read on for how to configure it to run
       Quick Venom Applications.
     </p>
-    <h4>Terminal Time</h4>
+    <h1>Terminal Time</h1>
     <p>
       In your terminal type in the following commands with your project name;<br/>
       <span class="code">sudo apt-get update</span><br/>
@@ -143,24 +143,34 @@ export default {
   .main {
     font-size: 1em;
     text-align: justify;
-    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    height: 100%;
+    background-image:url('../../assets/noise2.jpg');
+    width: 100vw;
+    overflow-y: scroll;
+    padding-bottom: 100vh;
   }
 
   .code {
     background-color: black;
     color: white;
     width: 100%;
-    margin-left: 1%;
-    margin-right: 1%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 4%;
+    margin-right: 4%;
     text-align: center;
   }
 
   h1 {
     text-align: center;
-    font-family: verdana;
-    font-weight: lighter;
-    color: #1bad4a;
-    text-decoration: underline;
+    color: #333;
+    font-weight: 300;
+    font-size: 2em;
   }
 
   p {
@@ -168,11 +178,10 @@ export default {
     line-height: 1.5em;
     padding-left: 6%;
     padding-right: 6%;
-    font-family: @bodyText;
+    margin-bottom: 10px;
   }
 
   ul {
-    font-family: @headText;
   }
 
   .socialLinks {
@@ -180,9 +189,9 @@ export default {
   }
 
   .link {
-    color: #1bad4a;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 300;
     text-align: center;
     margin-left: 5px;
   }
@@ -205,9 +214,12 @@ export default {
     color: grey;
     text-decoration: none;
   }
-
-  .articleClose {
-    border: solid 1px #1bad4a;
+  @media (min-width: 700px) {
+    .main {
+      width: 80vw;
+      margin-left: 10vw;
+      box-shadow: 0px 0px 5px black;
+    }
   }
 
 </style>
