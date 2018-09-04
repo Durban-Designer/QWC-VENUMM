@@ -64,7 +64,7 @@
       <span class="code">sudo apt-get install build-essential libssl-dev</span><br/>
       <span class="code">curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh</span><br/>
       <span class="code">source ~/.profile</span><br/>
-      <span class="code">nvm install 9.2.0</span><br/>
+      <span class="code">nvm install 9.11.2</span><br/>
       <span class="code">sudo npm install pm2 -g</span><br/>
       <span class="code">sudo mkdir /var/www/projectname</span><br/>
       <span class="code">sudo chmod 777 -R /var/www/projectname</span><br/>
