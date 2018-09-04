@@ -1,13 +1,13 @@
 <template>
   <div class="main">
-    <h2>Cordova</h2>
+    <h1>Cordova</h1>
     <p>
       Granting the ability to deploy to 7 operating systems using one codebase is no small feat. Initially Quasar creates a symlink allowing your code to be accessed.
       Cordova then acts as a browser interpreting the initial codebase (HTML,CSS and Javascript) and native plugins/APIs,
       essentially bridging the gap between both systems. These native built plugins allow access to each devices internal features such as: camera, location, data and file transfer.
       There are already hundreds of plugins already made with more and more being created every day.
     </p>
-    <h2>Setup and Use</h2>
+    <h1>Setup and Use</h1>
     <p>
       Luckily Cordova handles the heavy lifting when it comes to implimentation providing an easy to follow instructional guide on their <a href="https://cordova.apache.org/">website</a>.
       When it comes to use with the QWC-VENUMM stack there are a few things to keep in mind:
@@ -53,77 +53,107 @@ export default {
   @bodyText: "Montserrat";
   @mainColor: #1bad4a;
 
-.main {
-  font-size: 1em;
-  text-align: justify;
-}
+  .main {
+    font-size: 1em;
+    text-align: justify;
+    position: absolute;
+    height: 100%;
+    background-image:url('../../assets/noise2.jpg');
+    width: 100vw;
+    overflow-y: scroll;
+    padding-bottom: 100vh;
+  }
 
-.code {
-  background-color: black;
-  color: white;
-  width: 100%;
-  margin-left: 1%;
-  margin-right: 1%;
-  text-align: center;
-}
+  .code {
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 4%;
+    margin-right: 4%;
+    text-align: center;
+  }
 
-h1 {
-  text-align: center;
-  font-family: verdana;
-  font-weight: lighter;
-  color: #1bad4a;
-  text-decoration: underline;
-}
+  h1 {
+    text-align: center;
+    color: #333;
+    font-weight: 300;
+    font-size: 2em;
+  }
 
-p {
-  text-align: left;
-  line-height: 1.5em;
-  padding-left: 6%;
-  padding-right: 6%;
-  font-family: @bodyText;
-}
+  p {
+    text-align: left;
+    line-height: 1.5em;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-bottom: 10px;
+  }
 
-ul {
-  font-family: @headText;
-}
+  ul {
+  }
 
-.cordovaapp {
+  .socialLinks {
+    text-align: center;
+  }
 
-}
+  .link {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 300;
+    text-align: center;
+    margin-left: 5px;
+  }
 
-.socialLinks {
-  text-align: center;
-}
+  h2 {
+    text-align: center;
+    font-family: @headText;
+    color: @mainColor;
+  }
 
-.link {
-  color: #1bad4a;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  margin-left: 5px;
-}
+  h3 {
+    text-align: center;
+    font-family: @headText;
+    color: @mainColor;
+  }
 
-h2 {
-  text-align: center;
-  font-family: @headText;
-  color: @mainColor;
-}
+  h4 {
+    text-align: center;
+    font-family: @bodyText;
+    color: grey;
+    text-decoration: none;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+      height:5px;
+  }
 
-h3 {
-  text-align: center;
-  font-family: @headText;
-  color: @mainColor;
-}
+  /* Track */
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px transparent;
+      border: none;
+  }
 
-h4 {
-  text-align: center;
-  font-family: @bodyText;
-  color: grey;
-  text-decoration: none;
-}
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #333;
+  }
 
-.articleClose {
-  border: solid 1px #1bad4a;
-}
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
+  @media (min-width: 700px) {
+    .main {
+      width: 80vw;
+      margin-left: 10vw;
+      box-shadow: 0px 0px 5px black;
+    }
+  }
 
 </style>

@@ -21,13 +21,19 @@ export default {
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(15,60px);
     text-align: center;
+    position: fixed;
+    height: 100%;
+    background-image:url('../assets/noise2.jpg');
+    width: 100vw;
+    overflow-y: scroll;
+    padding-bottom: 100vh;
   }
   h1 {
     grid-row: 4;
     grid-column-start: 1;
     grid-column-end: 6;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
+    margin-top: 40vh;
   }
   .qwc-venumm {
     grid-row-start: 1;
@@ -35,6 +41,12 @@ export default {
     grid-column-start: 2;
     grid-column-end: 5;
     width: 100%;
-
+  }
+  @media (min-width: 700px) {
+    .main {
+      width: 80vw;
+      margin-left: 10vw;
+      box-shadow: 0px 0px 5px black;
+    }
   }
 </style>

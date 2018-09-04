@@ -183,7 +183,7 @@
       <span class="code">cordova platform add android</span><br/> to add the android platform.<br/>
       <span class="code">cordova build android</span><br/> to build for android.<br/>
       <span class="code">cordova run android</span><br/> to deploy to plugged in device/emulator.
-      if it throws a <span class="error">Error: Cannot read property 'replace' of undefined</span> error <span class="link"><a href="https://stackoverflow.com/questions/44687476/cordova-android-emulator-cannot-read-property-replace-of-undefined">click here</a></span>
+      if it throws a <span class="error">Error: Cannot read property 'replace' of undefined</span> error <span class="link"><a class="link" href="https://stackoverflow.com/questions/44687476/cordova-android-emulator-cannot-read-property-replace-of-undefined">click here</a></span>
       If all went according to plan then you should have the emulator pop up and display the quasar logo in an app.
     </p>
     <p>
@@ -254,10 +254,37 @@ export default {
 <style scoped lang="less">
 @headText: 'Montserrat', sans-serif;
 @bodyText: 'Montserrat', sans-serif;
-@mainColor: #1bad4a;
+@mainColor: #333;
   .main {
     font-size: 1em;
     text-align: justify;
+    position: fixed;
+    height: 100%;
+    background-image:url('../../assets/noise2.jpg');
+    width: 100vw;
+    overflow-y: scroll;
+    padding-bottom: 100vh;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+      height:5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px transparent;
+      border: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #333;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
   }
 
   .code {
@@ -276,11 +303,10 @@ export default {
   }
 
   h1 {
-    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-weight: lighter;
-    color: #1bad4a;
-    text-decoration: underline;
+    color: #333;
+    font-weight: 300;
+    font-size: 2em;
   }
 
   p {
@@ -301,9 +327,9 @@ export default {
   }
 
   .link {
-    color: #1bad4a;
+    color: #fff;
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: 300;
     text-align: center;
     margin-left: 5px;
   }
@@ -329,6 +355,13 @@ export default {
 
   .articleClose {
     border: solid 1px #1bad4a;
+  }
+  @media (min-width: 700px) {
+    .main {
+      width: 80vw;
+      margin-left: 10vw;
+      box-shadow: 0px 0px 5px black;
+    }
   }
 
 </style>

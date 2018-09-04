@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="appmain">
     <navbar></navbar>
     <router-view></router-view>
   </div>
@@ -16,7 +16,8 @@ export default {
 </script>
 
 <style>
-  h1 {
-    font-size: 2em;
-  }
+.appmain {
+  background-image: url('assets/noise.png');
+  height: 100vh;
+}
 </style>

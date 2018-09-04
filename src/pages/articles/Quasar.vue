@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h2>Quasar</h2>
+    <h1>Quasar</h1>
     <p>
       Quasar plays a vital role in the QWC-VENUMM Webstack. It's fairly easy to install and works all by itself beautifully. It sets up dev servers with hot reload, builds for production and tons of other great development tools including code minifying.
       For the exact process of how it is used in conjuncture with our other technologies <span class="link" v-on:click="vueNav">click here.</span><br/>
@@ -14,17 +14,12 @@
       Layout, Navigation, Form inputs, animation, you name it, Quasar makes it better. Quasar is an indespensable tool for all your development needs and it will only stand to improve from here.
       For an in depth look at all the different components you now have at your fingertips <a href="http://quasar-framework.org/components/" class="link">click here. </a>
     </p>
-    <p>
-      Thank you for reading, I hope this article helps you form a richer understanding of the Quasar framework. Look forward to more articles on
-      this subject in the future as we take a deep dive into all of Quasars many features.
-    </p>
     <div class="articleClose">
       <div class="krisImage"></div>
       <p>
-        Kristoffer St.John is the Vice President of Screen Art Studios as well as the Art Director,
-        and a Full Stack Web developer. An extremely talented Illustrator, Graphic Designer, and Author his presence
-        ensures every product is a true work of Art. He operates his own blog over at <a class="link" href="http://www.bluestarcreative.com">BluestarCreative.com</a> and
-        is a contributing Author for the <a href="http://www.quickvenom.org" class="link">QuickVenom.org</a> blog.
+        Kristoffer St John is the Vice President of Screen Art Studios as well as the Art Director,
+        and a Software Engineer. A talented Illustrator, Graphic Designer, and Author his presence
+        ensures every product is a true work of Art. He is a contributing Author for the <a href="http://www.quickvenom.org" class="link">QuickVenom.org</a> blog.
       </p>
       <div class="socialLinks">
         <a class="link" href="https://www.linkedin.com/in/kristoffer-murphy-948944145/">LinkedIn</a>
@@ -85,22 +80,35 @@ export default {
   .main {
     font-size: 1em;
     text-align: justify;
-    font-family: 'Montserrat', sans-serif;
-    width: 90%;
+    position: absolute;
+    height: 100%;
+    background-image:url('../../assets/noise2.jpg');
+    width: 100vw;
+    overflow-y: scroll;
+    padding-bottom: 100vh;
+    z-index: 1;
   }
 
-  .socialLinks {
+  .code {
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 4%;
+    margin-right: 4%;
     text-align: center;
   }
 
-  .articleClose {
-    border: solid 1px #1bad4a;
-  }
-
-  h2 {
-    color: #1bad4a;
+  h1 {
     text-align: center;
-    text-decoration: underline;
+    color: #333;
+    font-weight: 300;
+    font-size: 2em;
   }
 
   p {
@@ -108,22 +116,69 @@ export default {
     line-height: 1.5em;
     padding-left: 6%;
     padding-right: 6%;
-    font-family: @bodyText;
+    margin-bottom: 10px;
+  }
+
+  ul {
+  }
+
+  .socialLinks {
+    text-align: center;
   }
 
   .link {
-    color: #1bad4a;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 300;
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: @headText;
+    color: @mainColor;
+  }
+
+  h3 {
+    text-align: center;
+    font-family: @headText;
+    color: @mainColor;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: @bodyText;
+    color: grey;
     text-decoration: none;
-    font-weight: bold;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+      width: 10px;
+      height:5px;
   }
 
-  .link:hover {
-    color: #3bdb6d;
+  /* Track */
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px transparent;
+      border: none;
   }
 
-  p {
-    text-align: left;
-    margin-left: 10px;
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #333;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
+  @media (min-width: 700px) {
+    .main {
+      width: 80vw;
+      margin-left: 10vw;
+      box-shadow: 0px 0px 5px black;
+    }
   }
 
 </style>
